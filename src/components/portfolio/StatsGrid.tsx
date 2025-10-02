@@ -34,28 +34,39 @@ export function StatsGrid({ stats }: StatsGridProps) {
   ];
 
   return (
-    <Card className="border-border bg-card">
+    <Card className="border-border bg-card premium-card shadow-premium overflow-hidden">
       <CardContent className="p-0">
         <div className="grid grid-cols-1 md:grid-cols-3">
           {statItems.map((item, index) => (
-            <div 
+            <div
               key={index}
               className={`
-                p-4 border-border
+                group relative p-6 border-border transition-all duration-300
+                hover:bg-gradient-to-br hover:from-card hover:to-secondary/30
                 ${index % 3 !== 2 ? 'md:border-r' : ''}
                 ${index < 6 ? 'border-b' : ''}
               `}
             >
-              <div className="text-muted-foreground text-sm mb-1">{item.label}</div>
-              <div className={`
-                font-semibold text-lg
-                ${item.isMain ? 'text-xl' : ''}
-                ${item.positive ? 'text-success' : ''}
-                ${item.negative ? 'text-destructive' : ''}
-                ${!item.positive && !item.negative && !item.isMain ? 'text-foreground' : ''}
-              `}>
-                {item.value}
+              <div className="relative z-10">
+                <div className="text-muted-foreground text-xs uppercase tracking-wider mb-2 font-medium">
+                  {item.label}
+                </div>
+                <div className={`
+                  font-bold transition-all duration-300
+                  ${item.isMain ? 'text-2xl' : 'text-xl'}
+                  ${item.positive ? 'text-success group-hover:glow-success' : ''}
+                  ${item.negative ? 'text-destructive group-hover:glow-destructive' : ''}
+                  ${!item.positive && !item.negative && !item.isMain ? 'text-foreground' : ''}
+                `}>
+                  {item.value}
+                </div>
               </div>
+              {/* Subtle gradient overlay on hover */}
+              <div className={`
+                absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none
+                ${item.positive ? 'bg-gradient-to-br from-success/5 to-transparent' : ''}
+                ${item.negative ? 'bg-gradient-to-br from-destructive/5 to-transparent' : ''}
+              `}></div>
             </div>
           ))}
         </div>

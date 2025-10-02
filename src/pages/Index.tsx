@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
 import { Trade } from '@/types/trade';
-import { 
-  calculateCumulativePnL, 
-  calculateStats, 
+import {
+  calculateCumulativePnL,
+  calculateStats,
   calculateMonthlyPerformance,
-  parseCsvTrades 
+  calculateTotalInvested,
+  parseFirebaseJson
 } from '@/lib/tradeCalculations';
 import { CumulativePnLChart } from '@/components/portfolio/CumulativePnLChart';
 import { StatsGrid } from '@/components/portfolio/StatsGrid';
@@ -20,18 +21,36 @@ const Index = () => {
   useEffect(() => {
     const loadTrades = async () => {
       try {
-        // Check if we have saved trades in localStorage
-        const savedTrades = localStorage.getItem('portfolio-trades');
-        if (savedTrades) {
-          setTrades(JSON.parse(savedTrades));
-        } else {
-          // Load initial CSV data
-          const response = await fetch('/src/data/portfolio_trades.csv');
-          const csvText = await response.text();
-          const parsedTrades = parseCsvTrades(csvText);
-          setTrades(parsedTrades);
-          localStorage.setItem('portfolio-trades', JSON.stringify(parsedTrades));
+        // Clear localStorage to force fresh load
+        localStorage.removeItem('portfolio-trades');
+
+        console.log('Loading JSON files...');
+
+        const [transactionPortfolioResponse, closedTransactionsResponse] = await Promise.all([
+          fetch('/transaction_portfolio.json'),
+          fetch('/closed_transactions.json')
+        ]);
+
+        console.log('Fetch responses:', transactionPortfolioResponse.status, closedTransactionsResponse.status);
+
+        if (!transactionPortfolioResponse.ok || !closedTransactionsResponse.ok) {
+          throw new Error('Failed to fetch JSON files');
         }
+
+        const transactionPortfolioData = await transactionPortfolioResponse.json();
+        const closedTransactionsData = await closedTransactionsResponse.json();
+
+        console.log('Transaction portfolio count:', transactionPortfolioData.length);
+        console.log('Closed transactions count:', closedTransactionsData.length);
+
+        const parsedTrades = parseFirebaseJson(transactionPortfolioData, closedTransactionsData);
+
+        console.log('Parsed trades count:', parsedTrades.length);
+        console.log('First 3 trades:', parsedTrades.slice(0, 3));
+        console.log('Last 3 trades:', parsedTrades.slice(-3));
+
+        setTrades(parsedTrades);
+        localStorage.setItem('portfolio-trades', JSON.stringify(parsedTrades));
       } catch (error) {
         console.error('Error loading trades:', error);
       } finally {
@@ -50,10 +69,20 @@ const Index = () => {
 
   if (loading) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-background">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-success mx-auto mb-4"></div>
-          <p className="text-muted-foreground">Loading portfolio data...</p>
+      <div className="flex min-h-screen items-center justify-center">
+        <div className="text-center space-y-4 fade-in">
+          <div className="relative">
+            <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-success mx-auto pulse-glow"></div>
+            <div className="absolute inset-0 animate-ping rounded-full h-16 w-16 border-2 border-success/30 mx-auto"></div>
+          </div>
+          <div className="space-y-2">
+            <p className="text-muted-foreground font-medium">Cargando datos del portafolio...</p>
+            <div className="flex justify-center gap-1">
+              <div className="w-2 h-2 bg-success rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
+              <div className="w-2 h-2 bg-success rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
+              <div className="w-2 h-2 bg-success rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
+            </div>
+          </div>
         </div>
       </div>
     );
@@ -62,21 +91,26 @@ const Index = () => {
   const cumulativePnL = calculateCumulativePnL(trades);
   const stats = calculateStats(trades);
   const monthlyPerformance = calculateMonthlyPerformance(trades);
+  const totalInvested = calculateTotalInvested(trades);
   const currentPnL = cumulativePnL.length > 0 ? cumulativePnL[cumulativePnL.length - 1].value : 0;
 
   return (
-    <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="border-b border-border bg-card">
+    <div className="min-h-screen">
+      {/* Header with Glass-morphism */}
+      <header className="border-b border-border/50 backdrop-blur-glass sticky top-0 z-50 shadow-premium">
         <div className="container mx-auto px-4 py-6">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <div className="bg-success/20 p-2 rounded-lg">
-                <TrendingUp className="h-6 w-6 text-success" />
+            <div className="flex items-center gap-4 fade-in">
+              <div className="bg-gradient-to-br from-success/30 to-success/10 p-3 rounded-xl border border-success/20 shadow-lg">
+                <TrendingUp className="h-7 w-7 text-success drop-shadow-lg" />
               </div>
               <div>
-                <h1 className="text-2xl font-bold text-foreground">Portfolio Tracker</h1>
-                <p className="text-muted-foreground text-sm">Real-time trading performance dashboard</p>
+                <h1 className="text-3xl font-bold text-foreground tracking-tight">
+                  Portafolio Privado Daniel Muvdi
+                </h1>
+                <p className="text-muted-foreground text-sm font-medium mt-0.5">
+                  Panel de rendimiento de trading en tiempo real
+                </p>
               </div>
             </div>
             <AddTradeDialog onAddTrade={handleAddTrade} />
@@ -84,19 +118,27 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Main Content */}
-      <main className="container mx-auto px-4 py-8 space-y-6">
+      {/* Main Content with staggered animations */}
+      <main className="container mx-auto px-4 py-8 space-y-8">
         {/* Cumulative P&L Chart - Hero Section */}
-        <CumulativePnLChart data={cumulativePnL} currentPnL={currentPnL} />
+        <div className="fade-in" style={{ animationDelay: '100ms' }}>
+          <CumulativePnLChart data={cumulativePnL} currentPnL={currentPnL} totalInvested={totalInvested} />
+        </div>
 
         {/* Stats Grid */}
-        <StatsGrid stats={stats} />
+        <div className="fade-in" style={{ animationDelay: '200ms' }}>
+          <StatsGrid stats={stats} />
+        </div>
 
         {/* Monthly Charts */}
-        <MonthlyCharts data={monthlyPerformance} />
+        <div className="fade-in" style={{ animationDelay: '300ms' }}>
+          <MonthlyCharts data={monthlyPerformance} />
+        </div>
 
         {/* Trades Table */}
-        <TradesTable trades={trades} />
+        <div className="fade-in" style={{ animationDelay: '400ms' }}>
+          <TradesTable trades={trades} />
+        </div>
       </main>
     </div>
   );

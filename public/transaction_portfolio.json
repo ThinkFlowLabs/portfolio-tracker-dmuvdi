@@ -1,0 +1,7607 @@
+[
+  {
+    "id": "026zWcsLMbVrELTXc6pA",
+    "created_time": {
+      "_seconds": 1682000940,
+      "_nanoseconds": 0
+    },
+    "amount": 2,
+    "allocation": 3.34,
+    "ticker": "TSLA",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 167,
+    "name": "Tesla Inc.",
+    "amount_usd": 334,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "4k6QLAXVO8rW9d5KaJyz"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "0Qw5HksdKqYwh7lFtkn1",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "CVqE75JIvkCsW7pskU3X"
+        ]
+      },
+      "_converter": {}
+    },
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "amount": 1.55,
+    "price": 259.27,
+    "created_time": {
+      "_seconds": 1732556940,
+      "_nanoseconds": 0
+    },
+    "operation": "Venta",
+    "allocation": 4,
+    "name": "Carvana Co",
+    "ticker": "CVNA",
+    "type": "Stock",
+    "amount_usd": 401.8685
+  },
+  {
+    "id": "0cZk9vIg3tWi2sfsdtIh",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "eUFXrnLh6UtXebG8Nx5c"
+        ]
+      },
+      "_converter": {}
+    },
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "6NqRdZAX2H1xJLpYlE19"
+        ]
+      },
+      "_converter": {}
+    },
+    "amount": 2.9806,
+    "price": 167.75,
+    "created_time": {
+      "_seconds": 1730229660,
+      "_nanoseconds": 0
+    },
+    "operation": "Compra",
+    "allocation": 5,
+    "name": "Procter & Gamble Co",
+    "ticker": "PG",
+    "type": "Stock",
+    "amount_usd": 499.99565
+  },
+  {
+    "id": "0cpn8f442h36BsbMSPLR",
+    "created_time": {
+      "_seconds": 1755786600,
+      "_nanoseconds": 0
+    },
+    "amount": 1.482,
+    "allocation": 2,
+    "ticker": "CRCL",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 135,
+    "name": "Circle Internet Group Inc",
+    "amount_usd": 200.07,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "Z5P0m9HFdPOTNgNBgqUe"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "0dMRwFQkkCIcNZwCqkPm",
+    "created_time": {
+      "_seconds": 1725897420,
+      "_nanoseconds": 0
+    },
+    "amount": 14.5943,
+    "allocation": 10,
+    "ticker": "DLTR",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "6NqRdZAX2H1xJLpYlE19"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 68.52,
+    "name": "Dollar Tree Inc.",
+    "amount_usd": 1000.001436,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "mlTnzfi59lPPMz8mhO6t"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "0x8csUEXFlrrqIbFjXcm",
+    "created_time": {
+      "_seconds": 1697045700,
+      "_nanoseconds": 0
+    },
+    "ticker": "JD",
+    "allocation": 3,
+    "amount": 9.92,
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 30.25,
+    "amount_usd": 300.08,
+    "name": "JD.com Inc.",
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "KJ2Dh8G8jhme0SUxuD1N"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "152yFa3lJBwilt7QBORR",
+    "created_time": {
+      "_seconds": 1710778860,
+      "_nanoseconds": 0
+    },
+    "amount": 10.104,
+    "allocation": 11.64,
+    "ticker": "SCCO",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "6NqRdZAX2H1xJLpYlE19"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 115.25,
+    "name": "Southern Copper Corporation",
+    "amount_usd": 1164.4859999999999,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "O9OvFa5dkeSZT7Irz3dv"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "18P7UAnVqIpu1SwW3syS",
+    "created_time": {
+      "_seconds": 1650557220,
+      "_nanoseconds": 0
+    },
+    "amount": 10,
+    "allocation": 1.74,
+    "ticker": "NIO",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 17.35,
+    "name": "Nio Inc.",
+    "amount_usd": 173.5,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "nxjADzt3yRJ35ITRaC9r"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "2o7RJrszWUahDELYgcea",
+    "created_time": {
+      "_seconds": 1689187740,
+      "_nanoseconds": 0
+    },
+    "amount": 9.9,
+    "allocation": 4.02,
+    "ticker": "CVNA",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 40.7,
+    "name": "Carvana Co.",
+    "amount_usd": 402.93000000000006,
+    "type": "Stock",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "ZbVAKaVkP9H7i760imAf"
+        ]
+      },
+      "_converter": {}
+    },
+    "operation": "Venta"
+  },
+  {
+    "id": "3EQdd5oFM71ru78E5M1R",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "Jn4lokKmecnMKokavJyd"
+        ]
+      },
+      "_converter": {}
+    },
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 129.95,
+    "created_time": {
+      "_seconds": 1732113300,
+      "_nanoseconds": 0
+    },
+    "operation": "Compra",
+    "name": "BWX Technologies Inc",
+    "ticker": "BWXT",
+    "type": "Stock",
+    "allocation": 4,
+    "amount": 3.0781069642170067,
+    "amount_usd": 400
+  },
+  {
+    "id": "3T3ke2dtASEcoDhcUqzZ",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "UPngRVXVYv99p4H0kLbu"
+        ]
+      },
+      "_converter": {}
+    },
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "amount": 5.23,
+    "price": 38.27,
+    "created_time": {
+      "_seconds": 1741872660,
+      "_nanoseconds": 0
+    },
+    "operation": "Compra",
+    "allocation": 2,
+    "name": "Robin Hood Markets Inc",
+    "ticker": "HOOD",
+    "type": "Stock",
+    "amount_usd": 200.15210000000002
+  },
+  {
+    "id": "4Ah25DAsU7zQm4taAI2K",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "fRQvYJNa25Mu4DDVX3to"
+        ]
+      },
+      "_converter": {}
+    },
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "amount": 0.7168,
+    "price": 279.03,
+    "created_time": {
+      "_seconds": 1738161120,
+      "_nanoseconds": 0
+    },
+    "operation": "Compra",
+    "allocation": 2,
+    "name": "Constellation Energy Corporation",
+    "ticker": "CEG",
+    "type": "Stock",
+    "amount_usd": 200.00870399999997
+  },
+  {
+    "id": "4CzbQNF0uDbOSekbVf55",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "kNryG06ioY2JN3V4Dj2P"
+        ]
+      },
+      "_converter": {}
+    },
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "6NqRdZAX2H1xJLpYlE19"
+        ]
+      },
+      "_converter": {}
+    },
+    "amount": 8.1883,
+    "price": 48.85,
+    "created_time": {
+      "_seconds": 1739899620,
+      "_nanoseconds": 0
+    },
+    "operation": "Compra",
+    "allocation": 4,
+    "name": "Occidental Petroleum Corporation",
+    "ticker": "OXY",
+    "type": "Stock",
+    "amount_usd": 399.99845500000004
+  },
+  {
+    "id": "4n0AalLO0A2j5G3JChIP",
+    "created_time": {
+      "_seconds": 1652276880,
+      "_nanoseconds": 0
+    },
+    "amount": 19,
+    "allocation": 2.53,
+    "ticker": "PTON",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 13.3,
+    "name": "Peloton Interactive Inc",
+    "amount_usd": 252.70000000000002,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "tLVSoHpQyqgtrIzu2Hwt"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "4pIgEwJEX4mg2QU7svRh",
+    "created_time": {
+      "_seconds": 1710520380,
+      "_nanoseconds": 0
+    },
+    "amount": 2.7273,
+    "allocation": 10,
+    "ticker": "VBR",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "6NqRdZAX2H1xJLpYlE19"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 183.33,
+    "name": "Vanguard Small-Cap Value ETF",
+    "amount_usd": 499.99590900000004,
+    "type": "ETF",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "gZ7Y0rlvUyEvgEqyq8wB"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "59V79dnHn2QTe3Pu9MM8",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "nDuhdekWtMhdI9sxXXvS"
+        ]
+      },
+      "_converter": {}
+    },
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "amount": 1.46,
+    "price": 171.6,
+    "created_time": {
+      "_seconds": 1745333220,
+      "_nanoseconds": 0
+    },
+    "operation": "Compra",
+    "allocation": 2.5,
+    "name": "Amazon.com Inc",
+    "ticker": "AMZN",
+    "type": "Stock",
+    "amount_usd": 250.53599999999997
+  },
+  {
+    "id": "5vNgE6Vr2vDeTTJ5I52d",
+    "created_time": {
+      "_seconds": 1648051560,
+      "_nanoseconds": 0
+    },
+    "ticker": "RBLX",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 52.65,
+    "name": "Roblox Corp.",
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "RF8pADIIMmYk7ea5g703"
+        ]
+      },
+      "_converter": {}
+    },
+    "allocation": 2.6,
+    "amount": 4.93,
+    "amount_usd": 259.5645
+  },
+  {
+    "id": "67JXBVPEFsi1hcdyEk0d",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "cIIoIivP7Z7Na3VCPKVQ"
+        ]
+      },
+      "_converter": {}
+    },
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "6NqRdZAX2H1xJLpYlE19"
+        ]
+      },
+      "_converter": {}
+    },
+    "amount": 28.2646,
+    "price": 17.69,
+    "created_time": {
+      "_seconds": 1733414100,
+      "_nanoseconds": 0
+    },
+    "operation": "Compra",
+    "allocation": 5,
+    "name": "American Airlines Group",
+    "ticker": "AAL",
+    "type": "Stock",
+    "amount_usd": 500.00077400000004
+  },
+  {
+    "id": "6C54aSH9EZg8zI37K7CO",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "fRQvYJNa25Mu4DDVX3to"
+        ]
+      },
+      "_converter": {}
+    },
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "amount": 0.9345,
+    "price": 214.01,
+    "created_time": {
+      "_seconds": 1741286460,
+      "_nanoseconds": 0
+    },
+    "operation": "Compra",
+    "allocation": 2,
+    "name": "Constellation Energy Corporation",
+    "ticker": "CEG",
+    "type": "Stock",
+    "amount_usd": 199.992345
+  },
+  {
+    "id": "6QO9zENWwRsjGx9ATc6L",
+    "created_time": {
+      "_seconds": 1649353860,
+      "_nanoseconds": 0
+    },
+    "amount": 3,
+    "allocation": 4.92,
+    "ticker": "ABNB",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 164,
+    "name": "Airbnb Inc.",
+    "amount_usd": 492,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "khUpy0JfL7ZpsBfKTjzQ"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "6YWw1q32URV9elwHveJd",
+    "created_time": {
+      "_seconds": 1697045700,
+      "_nanoseconds": 0
+    },
+    "ticker": "HBI",
+    "amount": 76.15,
+    "allocation": 3,
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 3.94,
+    "name": "Hanesbrands Inc.",
+    "amount_usd": 300.031,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "mLLPW5i9pFUeNTogeQhx"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "70YI8Hv6cii0aIEarJD6",
+    "amount": 7.143,
+    "allocation": 2,
+    "ticker": "LUNA",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 28,
+    "name": "Luna",
+    "amount_usd": 200.004,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "OO97x6r5LjPJaytZJTTd"
+        ]
+      },
+      "_converter": {}
+    },
+    "created_time": {
+      "_seconds": 1652141400,
+      "_nanoseconds": 0
+    }
+  },
+  {
+    "id": "7Bu50qhGwY5sZrShAgRF",
+    "created_time": {
+      "_seconds": 1700493840,
+      "_nanoseconds": 0
+    },
+    "amount": 20.3,
+    "allocation": 2.5,
+    "ticker": "AAL",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 12.32,
+    "name": "American Airlines Group Inc.",
+    "amount_usd": 250.096,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "zmhbAnvZeIGqKT8NWNOK"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "7xpu90tRhSUPKiSic4pC",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "bnODgahXi5s6nKaj4oD3"
+        ]
+      },
+      "_converter": {}
+    },
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "amount": 1.25,
+    "price": 240,
+    "created_time": {
+      "_seconds": 1741889940,
+      "_nanoseconds": 0
+    },
+    "operation": "Compra",
+    "allocation": 3,
+    "name": "Tesla Inc",
+    "ticker": "TSLA",
+    "type": "Stock",
+    "amount_usd": 300
+  },
+  {
+    "id": "7xwGfUd62TlOkhFhmniL",
+    "created_time": {
+      "_seconds": 1697472120,
+      "_nanoseconds": 0
+    },
+    "amount": 0.007125,
+    "allocation": 2,
+    "ticker": "BTC",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 28070,
+    "name": "Bitcoin",
+    "amount_usd": 199.99875,
+    "type": "Cripto",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "4CcKYqolrIE3HcFsfjTt"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "8N3kbe9pKdc8FKlcdmZF",
+    "created_time": {
+      "_seconds": 1724081700,
+      "_nanoseconds": 0
+    },
+    "amount": 15.083,
+    "allocation": 3,
+    "ticker": "PENN",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "6NqRdZAX2H1xJLpYlE19"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 19.89,
+    "name": "Penn Entertainment Inc.",
+    "amount_usd": 300.00087,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "rm8myiE1xWtHtG8UdWNB"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "8RrqGBn3hdaFa3zdUglk",
+    "created_time": {
+      "_seconds": 1651767900,
+      "_nanoseconds": 0
+    },
+    "amount": 15,
+    "allocation": 2.33,
+    "ticker": "NIO",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 15.53,
+    "name": "Nio Inc.",
+    "amount_usd": 232.95,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "nxjADzt3yRJ35ITRaC9r"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "8egHokUW9WhzbILGbyVb",
+    "created_time": {
+      "_seconds": 1718717400,
+      "_nanoseconds": 0
+    },
+    "amount": 3.656,
+    "allocation": 20,
+    "ticker": "SPY",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 547.16,
+    "name": "SPDR S&P 500 ETF",
+    "amount_usd": 2000.41696,
+    "type": "ETF",
+    "operation": "Venta",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "Y2dcKOmgwCRLGz7GM9mt"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "94U2T97eDdA1jseC8MU2",
+    "created_time": {
+      "_seconds": 1670267400,
+      "_nanoseconds": 0
+    },
+    "allocation": 3.08,
+    "ticker": "BOIL",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "name": "ProShares Ultra Bloomberg Natural Gas",
+    "amount_usd": 308,
+    "type": "ETF",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "xrNHoCjBhJTC9Hmo9o8O"
+        ]
+      },
+      "_converter": {}
+    },
+    "amount": 0.55,
+    "price": 560
+  },
+  {
+    "id": "9wM4q9lU5Z1sHI9poEWh",
+    "created_time": {
+      "_seconds": 1718720820,
+      "_nanoseconds": 0
+    },
+    "amount": 9.1288,
+    "allocation": 50,
+    "ticker": "SPY",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "6NqRdZAX2H1xJLpYlE19"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 547.74,
+    "name": "SPDR S&P 500 ETF Trust",
+    "amount_usd": 5000.208912,
+    "type": "ETF",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "9xZfUWKKuHiz5QxyXL2L"
+        ]
+      },
+      "_converter": {}
+    },
+    "operation": "Venta"
+  },
+  {
+    "id": "9yM9c9E5QOIdW6hlt0iZ",
+    "created_time": {
+      "_seconds": 1712691960,
+      "_nanoseconds": 0
+    },
+    "amount": 25,
+    "allocation": 20.26,
+    "ticker": "USO",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "6NqRdZAX2H1xJLpYlE19"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 81.04,
+    "name": "United States Oil Fund",
+    "amount_usd": 2026.0000000000002,
+    "type": "ETF",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "MxfkMVYSr96qyW3L4vKj"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "A0WAl0JwGRbmq347tnyQ",
+    "created_time": {
+      "_seconds": 1652365140,
+      "_nanoseconds": 0
+    },
+    "amount": 6.75,
+    "allocation": 2.5,
+    "ticker": "AVAX",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 37,
+    "name": "Avalanche",
+    "amount_usd": 249.75,
+    "type": "Cripto",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "bERuqGF8heX985Fc5xvl"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "Ac5luc3lCWk91OZsGQOv",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "Q8rWtUKuoG7YsACDdcjj"
+        ]
+      },
+      "_converter": {}
+    },
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "amount": 3.358,
+    "price": 297.8,
+    "created_time": {
+      "_seconds": 1747666080,
+      "_nanoseconds": 0
+    },
+    "operation": "Compra",
+    "allocation": 10,
+    "name": "SPDR Gold Trust",
+    "ticker": "GLD",
+    "type": "ETF",
+    "amount_usd": 1000.0124000000001
+  },
+  {
+    "id": "Ak0khh0zGSjI2i0GjkEG",
+    "created_time": {
+      "_seconds": 1657296300,
+      "_nanoseconds": 0
+    },
+    "amount": 6,
+    "allocation": 2.08,
+    "ticker": "RCL",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 34.7,
+    "name": "Royal Caribbean Cruises LTD",
+    "amount_usd": 208.20000000000002,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "Yv94bZ3kUbOlhExFive5"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "AtJw4nNQJpJc8Hes85mx",
+    "created_time": {
+      "_seconds": 1692023760,
+      "_nanoseconds": 0
+    },
+    "amount": 13.56,
+    "allocation": 2,
+    "ticker": "LMND",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 14.75,
+    "name": "Lemonade Inc.",
+    "amount_usd": 200.01000000000002,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "E5wQ3iE7v08swD0yYRSn"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "B1Ll9dFCf0PEpd5Zepok",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "2CGTjMQ9JbUx9KlaBFQk"
+        ]
+      },
+      "_converter": {}
+    },
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "6NqRdZAX2H1xJLpYlE19"
+        ]
+      },
+      "_converter": {}
+    },
+    "amount": 2.9526,
+    "price": 169.34,
+    "created_time": {
+      "_seconds": 1739899860,
+      "_nanoseconds": 0
+    },
+    "operation": "Compra",
+    "allocation": 5,
+    "name": "Vistra",
+    "ticker": "VST",
+    "type": "Stock",
+    "amount_usd": 499.993284
+  },
+  {
+    "id": "BBypAOvkRPdE21vEuY13",
+    "created_time": {
+      "_seconds": 1713886980,
+      "_nanoseconds": 0
+    },
+    "amount": 6.1893,
+    "allocation": 10,
+    "ticker": "CVX",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "6NqRdZAX2H1xJLpYlE19"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 161.57,
+    "name": "Chevron Corporation",
+    "amount_usd": 1000.0052009999999,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "1fGtbVO1tdlM0prve8Gn"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "BFJx3QgcOz9Lt7ysmwpN",
+    "created_time": {
+      "_seconds": 1667835900,
+      "_nanoseconds": 0
+    },
+    "amount": 9,
+    "allocation": 2.88,
+    "ticker": "RIVN",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 32,
+    "name": "Rivian Automotive Inc.",
+    "amount_usd": 288,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "4nuqP0xzGonXCSd0cuQY"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "BIlo7WkJsExExVYRlsF8",
+    "created_time": {
+      "_seconds": 1700156580,
+      "_nanoseconds": 0
+    },
+    "amount": 7.21,
+    "allocation": 2,
+    "ticker": "JD",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 27.75,
+    "name": "JD.com Inc.",
+    "amount_usd": 200.0775,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "KJ2Dh8G8jhme0SUxuD1N"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "CDA3LB4k9FXNqkfGUb1k",
+    "created_time": {
+      "_seconds": 1661873820,
+      "_nanoseconds": 0
+    },
+    "amount": 3,
+    "allocation": 4.77,
+    "ticker": "AAPL",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 159,
+    "name": "Apple Inc.",
+    "amount_usd": 477,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "zpt65mwpumm8hVxCV1tL"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "CNl8uvmcbcTNwrXqKopf",
+    "created_time": {
+      "_seconds": 1650985620,
+      "_nanoseconds": 0
+    },
+    "allocation": 3.37,
+    "ticker": "MS",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 84.15,
+    "name": "Morgan Stanley",
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "cifR6sDcaks9XKjVO2qO"
+        ]
+      },
+      "_converter": {}
+    },
+    "amount": 4.004753416518122,
+    "amount_usd": 337
+  },
+  {
+    "id": "DDvUTVxX9PN190MDf27r",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "qXvR5nupAJPQLCWMe1XE"
+        ]
+      },
+      "_converter": {}
+    },
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "amount": 1.553,
+    "price": 644,
+    "created_time": {
+      "_seconds": 1756133460,
+      "_nanoseconds": 0
+    },
+    "operation": "Venta",
+    "allocation": 10,
+    "name": "SPDR S&P 500",
+    "ticker": "SPY",
+    "type": "ETF",
+    "amount_usd": 1000.132
+  },
+  {
+    "id": "DOQC2Qn8jcY40rYtjyFv",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "wJJSReykX4P61E6bPhvM"
+        ]
+      },
+      "_converter": {}
+    },
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "amount": 8.364,
+    "price": 35.87,
+    "created_time": {
+      "_seconds": 1744385460,
+      "_nanoseconds": 0
+    },
+    "operation": "Compra",
+    "allocation": 3,
+    "name": "Occidental Petroleum",
+    "ticker": "OXY",
+    "type": "Stock",
+    "amount_usd": 300.01668
+  },
+  {
+    "id": "DnRSoeEgDDKwk6UdBtnA",
+    "amount_usd": 200.03142,
+    "amount": 2.333,
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "allocation": 2,
+    "price": 85.74,
+    "ticker": "TLT",
+    "name": "iShare 20+ Year Treasury",
+    "created_time": {
+      "_seconds": 1749571680,
+      "_nanoseconds": 0
+    },
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "aKZu4YqwZxcaMYrnIkDp"
+        ]
+      },
+      "_converter": {}
+    },
+    "operation": "Compra",
+    "type": "ETF"
+  },
+  {
+    "id": "E67eGO7eJQWZuSSpDBAL",
+    "created_time": {
+      "_seconds": 1648051500,
+      "_nanoseconds": 0
+    },
+    "amount": 3,
+    "allocation": 4.96,
+    "ticker": "TWLO",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 165.37,
+    "name": "Twilio Inc.",
+    "amount_usd": 496.11,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "sOdZESPOrXBNDEO9BcAw"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "Ei3Pmb17ZkW8hKRq1VoB",
+    "created_time": {
+      "_seconds": 1700493960,
+      "_nanoseconds": 0
+    },
+    "amount": 6.91,
+    "allocation": 2.5,
+    "ticker": "DAL",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 36.19,
+    "name": "Delta air lines Inc.",
+    "amount_usd": 250.07289999999998,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "Mcx1nrISMB7CiCMpnvcd"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "EvsHbVLFUzS2ddtsthCM",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "MzRXpXfQjDHrdIw6IYEt"
+        ]
+      },
+      "_converter": {}
+    },
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "6NqRdZAX2H1xJLpYlE19"
+        ]
+      },
+      "_converter": {}
+    },
+    "amount": 47.755,
+    "price": 20.94,
+    "created_time": {
+      "_seconds": 1733413980,
+      "_nanoseconds": 0
+    },
+    "operation": "Compra",
+    "allocation": 10,
+    "name": "Zim Integrated Shipping Services",
+    "ticker": "ZIM",
+    "type": "Stock",
+    "amount_usd": 999.9897000000001
+  },
+  {
+    "id": "ExqlsDHBYYqQmE0BVu7C",
+    "created_time": {
+      "_seconds": 1649170500,
+      "_nanoseconds": 0
+    },
+    "ticker": "SE",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 126.53,
+    "name": "Sea Ltd.",
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "xp4acHdV2AAfTHpWThTS"
+        ]
+      },
+      "_converter": {}
+    },
+    "allocation": 5.05,
+    "amount": 3.99,
+    "amount_usd": 504.8547
+  },
+  {
+    "id": "Ey0X2FH14tiYoI5ZO38M",
+    "created_time": {
+      "_seconds": 1725900960,
+      "_nanoseconds": 0
+    },
+    "amount": 5.31,
+    "allocation": 3,
+    "ticker": "CVS",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 56.6,
+    "name": "CVS Health Corp",
+    "amount_usd": 300.546,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "i9pfBGamlfnwAnDWVSrX"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "FUMH16GK4pOyTeppxmJO",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "kNryG06ioY2JN3V4Dj2P"
+        ]
+      },
+      "_converter": {}
+    },
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "6NqRdZAX2H1xJLpYlE19"
+        ]
+      },
+      "_converter": {}
+    },
+    "amount": 6.2396,
+    "price": 48.08,
+    "created_time": {
+      "_seconds": 1739227500,
+      "_nanoseconds": 0
+    },
+    "operation": "Compra",
+    "allocation": 3,
+    "name": "Occidental Petroleum Corporation",
+    "ticker": "OXY",
+    "type": "Stock",
+    "amount_usd": 299.999968
+  },
+  {
+    "id": "Fa81dHSaNDmyt3HHbtVf",
+    "allocation": 4.26,
+    "ticker": "SQ",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "name": "Square Inc.",
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "Z1ppYVjEDHYwPO9Imr3k"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 143.07,
+    "created_time": {
+      "_seconds": 1647961080,
+      "_nanoseconds": 0
+    },
+    "amount": 2.9776,
+    "amount_usd": 426.0052
+  },
+  {
+    "id": "FxbapDTiTsWRR7IE5T7p",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "WeGPcyMyOWM4fliwpbsc"
+        ]
+      },
+      "_converter": {}
+    },
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "amount": 0.00385,
+    "price": 78000,
+    "created_time": {
+      "_seconds": 1741633140,
+      "_nanoseconds": 0
+    },
+    "operation": "Compra",
+    "allocation": 3,
+    "name": "Bitcoin",
+    "ticker": "BTC",
+    "type": "Cripto",
+    "amount_usd": 300.3
+  },
+  {
+    "id": "G5mkGiet0HDOT5jBFqy1",
+    "created_time": {
+      "_seconds": 1722862260,
+      "_nanoseconds": 0
+    },
+    "amount": 0.006,
+    "allocation": 3,
+    "ticker": "BTC",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 50000,
+    "name": "Bitcoin",
+    "amount_usd": 300,
+    "type": "Cripto",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "RgagnSvQlimHOMDnd9JP"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "GT5yh4CHOlhi93hN9rux",
+    "created_time": {
+      "_seconds": 1667483100,
+      "_nanoseconds": 0
+    },
+    "amount": 3,
+    "allocation": 2.77,
+    "ticker": "ABNB",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 92.25,
+    "name": "Airbnb Inc.",
+    "amount_usd": 276.75,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "khUpy0JfL7ZpsBfKTjzQ"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "GYOGtcO6rxm5YPDA5Uzk",
+    "created_time": {
+      "_seconds": 1655055900,
+      "_nanoseconds": 0
+    },
+    "amount": 236.686,
+    "allocation": 2,
+    "ticker": "MANA",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 0.845,
+    "name": "Decentraland",
+    "amount_usd": 199.99967,
+    "type": "Cripto",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "HO5ppWvK0sXlBzS0wLQv"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "GilEH76goDaIKWkdGlpL",
+    "created_time": {
+      "_seconds": 1702404000,
+      "_nanoseconds": 0
+    },
+    "amount": 4.49,
+    "allocation": 2.5,
+    "ticker": "DOCU",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 55.79,
+    "name": "Docu Sing",
+    "amount_usd": 250.49710000000002,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "dtRqQe700jmUg670Cepe"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "HeQ2lyNCn7NTBgH8qBBM",
+    "created_time": {
+      "_seconds": 1682000820,
+      "_nanoseconds": 0
+    },
+    "allocation": 2.02,
+    "ticker": "SPCE",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "name": "Virgin Galactic",
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "kuLXp3cUdjnOivxJTXrM"
+        ]
+      },
+      "_converter": {}
+    },
+    "amount": 2.7520435967302452,
+    "price": 73.4,
+    "amount_usd": 202.00000000000003
+  },
+  {
+    "id": "IKedLD3IBDp7WCDBfbVt",
+    "created_time": {
+      "_seconds": 1667835960,
+      "_nanoseconds": 0
+    },
+    "amount": 27,
+    "allocation": 3,
+    "ticker": "DKNG",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 11.1,
+    "name": "DraftKings Inc.",
+    "amount_usd": 299.7,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "bp0V4Gq2SCsyXRNa8ytc"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "IhweCfw4PTsvWZt7Ked8",
+    "created_time": {
+      "_seconds": 1663263060,
+      "_nanoseconds": 0
+    },
+    "amount": 3,
+    "allocation": 2.4,
+    "ticker": "TWLO",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 79.9,
+    "name": "Twilio Inc.",
+    "amount_usd": 239.70000000000002,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "sOdZESPOrXBNDEO9BcAw"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "It96wzno4pPykMH1dWF0",
+    "created_time": {
+      "_seconds": 1653056400,
+      "_nanoseconds": 0
+    },
+    "amount": 2,
+    "allocation": 2.05,
+    "ticker": "TWLO",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 102.5,
+    "name": "Twilio Inc.",
+    "amount_usd": 205,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "sOdZESPOrXBNDEO9BcAw"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "Ivad3Ri4zFlUtrAczC5N",
+    "ticker": "JWN",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 14.7,
+    "name": "Nordstrom Inc.",
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "oTH3sDhwDGAqHvivGRUB"
+        ]
+      },
+      "_converter": {}
+    },
+    "created_time": {
+      "_seconds": 1697045280,
+      "_nanoseconds": 0
+    },
+    "allocation": 3,
+    "amount_usd": 300,
+    "amount": 20.41
+  },
+  {
+    "id": "J8jThMfWHQrCmTP6nreR",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "KAiptCU4IJHzK8sQaKWY"
+        ]
+      },
+      "_converter": {}
+    },
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "6NqRdZAX2H1xJLpYlE19"
+        ]
+      },
+      "_converter": {}
+    },
+    "amount": 0.1286,
+    "price": 1556,
+    "created_time": {
+      "_seconds": 1744384980,
+      "_nanoseconds": 0
+    },
+    "operation": "Compra",
+    "allocation": 2,
+    "name": "Ethereum",
+    "ticker": "ETH",
+    "type": "Cripto",
+    "amount_usd": 200.1016
+  },
+  {
+    "id": "JDmEyTox4z7g5bWE5MUF",
+    "created_time": {
+      "_seconds": 1651170300,
+      "_nanoseconds": 0
+    },
+    "amount": 7,
+    "allocation": 3.26,
+    "ticker": "LUV",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 46.6,
+    "name": "Southwest Airlines Co.",
+    "amount_usd": 326.2,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "LoHcLXprWX987WifaJSv"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "JJIshxM6TN46wTUrqvZw",
+    "created_time": {
+      "_seconds": 1702414800,
+      "_nanoseconds": 0
+    },
+    "amount": 10.27,
+    "allocation": 2.5,
+    "ticker": "CTRA",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 24.36,
+    "name": "Coterra Energy Inc",
+    "amount_usd": 250.17719999999997,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "OGu6hmIhhZex7WB2kDzm"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "JaCKSVJVpfIOP2fX89KJ",
+    "created_time": {
+      "_seconds": 1725544680,
+      "_nanoseconds": 0
+    },
+    "amount": 6.42,
+    "allocation": 4,
+    "ticker": "DLTR",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 62.4,
+    "name": "Dollar Tree Inc",
+    "amount_usd": 400.608,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "0YuIyIS5xVfCKA1bmU6e"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "Jcimm7XPfN52uBtSQgO0",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "Yw7W76dGNq49DgzpwYic"
+        ]
+      },
+      "_converter": {}
+    },
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "6NqRdZAX2H1xJLpYlE19"
+        ]
+      },
+      "_converter": {}
+    },
+    "amount": 2.4542,
+    "price": 122.24,
+    "created_time": {
+      "_seconds": 1737128640,
+      "_nanoseconds": 0
+    },
+    "operation": "Compra",
+    "allocation": 3,
+    "name": "BWX Technologies Inc",
+    "ticker": "BWXT",
+    "type": "Stock",
+    "amount_usd": 300.001408
+  },
+  {
+    "id": "JlUXnD962HAHGYULHxng",
+    "created_time": {
+      "_seconds": 1697471820,
+      "_nanoseconds": 0
+    },
+    "ticker": "CCL",
+    "amount": 24.4,
+    "allocation": 3,
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 12.3,
+    "amount_usd": 300.12,
+    "name": "Carnival Corporation",
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "oZ0kBHfJhSgPkRySJmEL"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "JuuoTQUYGSIIAhdFx0Ym",
+    "created_time": {
+      "_seconds": 1698071640,
+      "_nanoseconds": 0
+    },
+    "amount": 3.33,
+    "allocation": 3,
+    "ticker": "WYNN",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 90.09,
+    "name": "Wynn Resorts",
+    "amount_usd": 299.9997,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "FN9Id34XiayznSf6NwS0"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "JwwKOefJa53Vkam0XzQM",
+    "created_time": {
+      "_seconds": 1718114400,
+      "_nanoseconds": 0
+    },
+    "amount": 6.6105,
+    "allocation": 4,
+    "ticker": "OXY",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "6NqRdZAX2H1xJLpYlE19"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 60.51,
+    "name": "Occidental Petroleum Corporation",
+    "amount_usd": 400.001355,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "kNryG06ioY2JN3V4Dj2P"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "KWZmUYy6FY3kbUCc5qe9",
+    "created_time": {
+      "_seconds": 1692890460,
+      "_nanoseconds": 0
+    },
+    "allocation": 2.5,
+    "ticker": "SPCE",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "name": "Virgin Galactic",
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "kuLXp3cUdjnOivxJTXrM"
+        ]
+      },
+      "_converter": {}
+    },
+    "amount": 4.8828125,
+    "price": 51.2,
+    "amount_usd": 250
+  },
+  {
+    "id": "KZvgzwHSo3txVfHzDYyg",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "Sqqv9Rr1YnAjPfuOPhWC"
+        ]
+      },
+      "_converter": {}
+    },
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "6NqRdZAX2H1xJLpYlE19"
+        ]
+      },
+      "_converter": {}
+    },
+    "amount": 8.1411,
+    "price": 36.85,
+    "created_time": {
+      "_seconds": 1737128580,
+      "_nanoseconds": 0
+    },
+    "operation": "Compra",
+    "allocation": 3,
+    "name": "VanEck Gold Miners ETF",
+    "ticker": "GDX",
+    "type": "ETF",
+    "amount_usd": 299.999535
+  },
+  {
+    "id": "Krl8bL8Ik1SxnPlTuj0k",
+    "created_time": {
+      "_seconds": 1651841100,
+      "_nanoseconds": 0
+    },
+    "amount": 3.731,
+    "allocation": 3,
+    "ticker": "LUNA",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 80.4,
+    "name": "Luna",
+    "amount_usd": 299.9724,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "OO97x6r5LjPJaytZJTTd"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "KwohmotF0C9luEyyTDkR",
+    "created_time": {
+      "_seconds": 1713459660,
+      "_nanoseconds": 0
+    },
+    "amount": 20,
+    "allocation": 9.308,
+    "ticker": "COPX",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "6NqRdZAX2H1xJLpYlE19"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 46.54,
+    "name": "Global X Copper Miners ETF",
+    "amount_usd": 930.8,
+    "type": "ETF",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "Qjt2CSBNR0CK5m0ztl0h"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "LWV19yrs3Lv6qpYoZcVi",
+    "created_time": {
+      "_seconds": 1725897480,
+      "_nanoseconds": 0
+    },
+    "amount": 9.995,
+    "allocation": 10,
+    "ticker": "TLT",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "6NqRdZAX2H1xJLpYlE19"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 100.05,
+    "name": "iShares 20+ Year Treasury Bond ETF",
+    "amount_usd": 999.99975,
+    "type": "ETF",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "6BPFk97fZjy1RhQPCT5J"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "MKs5tlDQwYn7qiA3o6fq",
+    "created_time": {
+      "_seconds": 1722804420,
+      "_nanoseconds": 0
+    },
+    "amount": 0.75972421,
+    "allocation": 20,
+    "ticker": "ETH",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "6NqRdZAX2H1xJLpYlE19"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 2632.53,
+    "name": "Ethereum",
+    "amount_usd": 1999.9967745513002,
+    "type": "Cripto",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "73JtVWAe7Z0rOC1pOsmp"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "MVHB0OFpkSXx6jOqtHg6",
+    "created_time": {
+      "_seconds": 1726502520,
+      "_nanoseconds": 0
+    },
+    "amount": 4.7569,
+    "allocation": 5,
+    "ticker": "COP",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "6NqRdZAX2H1xJLpYlE19"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 105.11,
+    "name": "ConocoPhillips",
+    "amount_usd": 499.997759,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "beRJfPVXOI8hHjV8QMbY"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "MaBDTdufbdboQIAIrAld",
+    "created_time": {
+      "_seconds": 1670949480,
+      "_nanoseconds": 0
+    },
+    "amount": 0.1509,
+    "allocation": 2,
+    "ticker": "ETH",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 1326,
+    "name": "Ethereum",
+    "amount_usd": 200.0934,
+    "type": "Cripto",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "z7LR41LyqjpIEjiWbs2n"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "N1bnohgP5IdOWi7RZTgc",
+    "created_time": {
+      "_seconds": 1722783480,
+      "_nanoseconds": 0
+    },
+    "amount": 0.01724048,
+    "allocation": 10,
+    "ticker": "BTC",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "6NqRdZAX2H1xJLpYlE19"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 58003.01,
+    "name": "Bitcoin",
+    "amount_usd": 999.9997338448,
+    "type": "Cripto",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "F9YwALoZppC8ExWhb0nV"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "NBXTvxuU86FWzsFupN6Y",
+    "created_time": {
+      "_seconds": 1692970320,
+      "_nanoseconds": 0
+    },
+    "amount": 53.58,
+    "allocation": 3,
+    "ticker": "PTON",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 5.6,
+    "name": "Peloton Interactive Inc.",
+    "amount_usd": 300.04799999999994,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "38YK7ISiUsrhLjN3AbfG"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "Nq9rbm5VKxDg93L0JAZN",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "52q1QbMvgnI9eHA5Uopj"
+        ]
+      },
+      "_converter": {}
+    },
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "6NqRdZAX2H1xJLpYlE19"
+        ]
+      },
+      "_converter": {}
+    },
+    "amount": 3.8137,
+    "price": 262.21,
+    "created_time": {
+      "_seconds": 1732562040,
+      "_nanoseconds": 0
+    },
+    "operation": "Venta",
+    "allocation": 10,
+    "name": "Carvana Co",
+    "ticker": "CVNA",
+    "type": "Stock",
+    "amount_usd": 999.9902769999999
+  },
+  {
+    "id": "O0htSS6peK1AKDccRDRn",
+    "created_time": {
+      "_seconds": 1690825140,
+      "_nanoseconds": 0
+    },
+    "amount": 1.6399,
+    "allocation": 3,
+    "ticker": "GLD",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 182.94,
+    "name": "SPDR Gold Trust",
+    "amount_usd": 300.00330599999995,
+    "type": "ETF",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "vStKiWirQMKRXho871vx"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "O9Yqz7YpDGZhGXttGChe",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "OT3I54ylosQHXWoyBmIV"
+        ]
+      },
+      "_converter": {}
+    },
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "6NqRdZAX2H1xJLpYlE19"
+        ]
+      },
+      "_converter": {}
+    },
+    "amount": 4.6404,
+    "price": 107.75,
+    "created_time": {
+      "_seconds": 1734967020,
+      "_nanoseconds": 0
+    },
+    "operation": "Compra",
+    "allocation": 5,
+    "name": "AECOM",
+    "ticker": "ACM",
+    "type": "Stock",
+    "amount_usd": 500.00309999999996
+  },
+  {
+    "id": "Ol0vCahc1MN16eLcolHN",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "cTTsinAWnxJSNB8IhNJd"
+        ]
+      },
+      "_converter": {}
+    },
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "amount": 0.8346,
+    "price": 599.11,
+    "created_time": {
+      "_seconds": 1759069800,
+      "_nanoseconds": 0
+    },
+    "operation": "Venta",
+    "allocation": 5,
+    "name": "Invesco QQQ Trust Series I",
+    "ticker": "QQQ",
+    "type": "ETF",
+    "amount_usd": 500.01720600000004
+  },
+  {
+    "id": "PKMkksVe4OVd8uzoZyVm",
+    "created_time": {
+      "_seconds": 1676049960,
+      "_nanoseconds": 0
+    },
+    "allocation": 2.5,
+    "ticker": "BOIL",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "name": "ProShares Ultra Bloomberg Natural Gas",
+    "amount_usd": 250.38,
+    "type": "ETF",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "xrNHoCjBhJTC9Hmo9o8O"
+        ]
+      },
+      "_converter": {}
+    },
+    "amount": 1.95,
+    "price": 128.4
+  },
+  {
+    "id": "PMj12B8hP9lonF6xgSVX",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "Yw7W76dGNq49DgzpwYic"
+        ]
+      },
+      "_converter": {}
+    },
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "6NqRdZAX2H1xJLpYlE19"
+        ]
+      },
+      "_converter": {}
+    },
+    "amount": 7.5086,
+    "price": 133.18,
+    "created_time": {
+      "_seconds": 1732218900,
+      "_nanoseconds": 0
+    },
+    "operation": "Compra",
+    "allocation": 10,
+    "name": "BWX Technologies Inc",
+    "ticker": "BWXT",
+    "type": "Stock",
+    "amount_usd": 999.9953480000001
+  },
+  {
+    "id": "PwYYv8vLuUiTAHSEwHmn",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "bWzhJcZ0FVR7TYSgX0iS"
+        ]
+      },
+      "_converter": {}
+    },
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "amount": 854.774,
+    "price": 1.1699,
+    "created_time": {
+      "_seconds": 1750951140,
+      "_nanoseconds": 0
+    },
+    "operation": "Venta",
+    "allocation": 10,
+    "name": "Par EUR/USD",
+    "ticker": "EUR/USD",
+    "type": "Forex",
+    "amount_usd": 1000.0001026
+  },
+  {
+    "id": "Q2TNGolNlXf62R0FWiVi",
+    "created_time": {
+      "_seconds": 1722826500,
+      "_nanoseconds": 0
+    },
+    "amount": 0.13044,
+    "allocation": 3,
+    "ticker": "ETH",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 2300,
+    "name": "Ethereum",
+    "amount_usd": 300.012,
+    "type": "Cripto",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "Ur0fjQRptaYOyiiQmgl1"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "QAlpj0mMeuhlZcVZZ4NX",
+    "created_time": {
+      "_seconds": 1719326280,
+      "_nanoseconds": 0
+    },
+    "amount": 10.4877,
+    "allocation": 4,
+    "ticker": "DKNG",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "6NqRdZAX2H1xJLpYlE19"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 38.14,
+    "name": "DraftKings Inc.",
+    "amount_usd": 400.000878,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "N4Vu9H8qdg7UUpTjx5Gb"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "QD7DKg89GzbKG0ES686o",
+    "created_time": {
+      "_seconds": 1722871620,
+      "_nanoseconds": 0
+    },
+    "amount": 2.4727,
+    "allocation": 5,
+    "ticker": "IWM",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "6NqRdZAX2H1xJLpYlE19"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 202.21,
+    "name": "iShares Russell 2000 ETF",
+    "amount_usd": 500.00466700000004,
+    "type": "ETF",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "abW6q6Khtmty8jGPSzDc"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "QLwvoO54Px7yR25XztGD",
+    "created_time": {
+      "_seconds": 1725378780,
+      "_nanoseconds": 0
+    },
+    "amount": 8.9831,
+    "allocation": 5,
+    "ticker": "OXY",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "6NqRdZAX2H1xJLpYlE19"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 55.66,
+    "name": "Occidental Petroleum Corporation",
+    "amount_usd": 499.999346,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "kNryG06ioY2JN3V4Dj2P"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "QpMphGQOROVH8DmDWwda",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "Yw7W76dGNq49DgzpwYic"
+        ]
+      },
+      "_converter": {}
+    },
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "6NqRdZAX2H1xJLpYlE19"
+        ]
+      },
+      "_converter": {}
+    },
+    "amount": 1.8848,
+    "price": 106.11,
+    "created_time": {
+      "_seconds": 1739900040,
+      "_nanoseconds": 0
+    },
+    "operation": "Compra",
+    "allocation": 2,
+    "name": "BWX Technologies Inc",
+    "ticker": "BWXT",
+    "type": "Stock",
+    "amount_usd": 199.996128
+  },
+  {
+    "id": "Qq0t3HpbiNECHlLh5TZf",
+    "created_time": {
+      "_seconds": 1648474980,
+      "_nanoseconds": 0
+    },
+    "amount": 7,
+    "allocation": 4.41,
+    "ticker": "CRSP",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 63,
+    "name": "Crispr Therapuutics AG",
+    "amount_usd": 441,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "Eouf4c2DksV2soHwdfZL"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "Qviok87bnuf4bwE1cjBV",
+    "created_time": {
+      "_seconds": 1663263000,
+      "_nanoseconds": 0
+    },
+    "amount": 4,
+    "allocation": 2.97,
+    "ticker": "ROKU",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 74.3,
+    "name": "Roku Inc.",
+    "amount_usd": 297.2,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "D7jaekqC82xB5uteVJvA"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "R5POJiWmca96OI5QLOXd",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "HYJEEiebkgy1jit3lpG0"
+        ]
+      },
+      "_converter": {}
+    },
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "amount": 1.6643,
+    "price": 180.3,
+    "created_time": {
+      "_seconds": 1756389540,
+      "_nanoseconds": 0
+    },
+    "operation": "Venta",
+    "allocation": 3,
+    "name": "Nvidia Corporation",
+    "ticker": "NVDA",
+    "type": "Stock",
+    "amount_usd": 300.07329
+  },
+  {
+    "id": "RZM5fMg54oxJ1isgOV6h",
+    "created_time": {
+      "_seconds": 1726248960,
+      "_nanoseconds": 0
+    },
+    "amount": 2.69,
+    "allocation": 3,
+    "ticker": "XOM",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 111.79,
+    "name": "Exxon Mobil Corp",
+    "amount_usd": 300.7151,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "hmPaKpMsssO1JvAlX5bs"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "RaDwAN35Y1lc3jnPLcEf",
+    "ticker": "RCL",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 82.42,
+    "name": "Royal Caribbean Cruises LTD",
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "Yv94bZ3kUbOlhExFive5"
+        ]
+      },
+      "_converter": {}
+    },
+    "created_time": {
+      "_seconds": 1648736940,
+      "_nanoseconds": 0
+    },
+    "allocation": 5.75,
+    "amount": 6.97,
+    "amount_usd": 574.4674
+  },
+  {
+    "id": "RbHalROps6yKqM3Yvjur",
+    "amount": 2,
+    "allocation": 2.83,
+    "ticker": "ABNB",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 141.5,
+    "name": "Airbnb Inc.",
+    "amount_usd": 283,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "khUpy0JfL7ZpsBfKTjzQ"
+        ]
+      },
+      "_converter": {}
+    },
+    "created_time": {
+      "_seconds": 1651763400,
+      "_nanoseconds": 0
+    }
+  },
+  {
+    "id": "RpNRdSBFiRJriRfSJaLk",
+    "created_time": {
+      "_seconds": 1722851880,
+      "_nanoseconds": 0
+    },
+    "amount": 0.01863998,
+    "allocation": 10,
+    "ticker": "BTC",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "6NqRdZAX2H1xJLpYlE19"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 53648.11,
+    "name": "Bitcoin",
+    "amount_usd": 999.9996974378,
+    "type": "Cripto",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "F9YwALoZppC8ExWhb0nV"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "SFa50IP69EBjICXBiSTK",
+    "created_time": {
+      "_seconds": 1666621800,
+      "_nanoseconds": 0
+    },
+    "amount": 6,
+    "allocation": 3.54,
+    "ticker": "BABA",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 59.05,
+    "name": "Alibaba Group Holdings Ltd.",
+    "amount_usd": 354.29999999999995,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "vXba9AlTG8mYkYgxypFk"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "SLZGg8QRGA2z1VYOnlZq",
+    "created_time": {
+      "_seconds": 1702407600,
+      "_nanoseconds": 0
+    },
+    "amount": 4.53,
+    "allocation": 2.5,
+    "ticker": "OXY",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 55.19,
+    "name": "Occidental Petroleum",
+    "amount_usd": 250.0107,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "wJJSReykX4P61E6bPhvM"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "SrhVhMtmYgGRcpQlQddt",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "O9OvFa5dkeSZT7Irz3dv"
+        ]
+      },
+      "_converter": {}
+    },
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "6NqRdZAX2H1xJLpYlE19"
+        ]
+      },
+      "_converter": {}
+    },
+    "amount": 3.5594,
+    "price": 98.33,
+    "created_time": {
+      "_seconds": 1737129540,
+      "_nanoseconds": 0
+    },
+    "operation": "Compra",
+    "allocation": 3.5,
+    "name": "Southern Copper Corporation",
+    "ticker": "SCCO",
+    "type": "Stock",
+    "amount_usd": 349.995802
+  },
+  {
+    "id": "TDbcLOxEK0mZlCxeBsVx",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "GcNfBqs6RLwVPzfNIrNa"
+        ]
+      },
+      "_converter": {}
+    },
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "amount": 0.1286,
+    "price": 1556,
+    "created_time": {
+      "_seconds": 1744385400,
+      "_nanoseconds": 0
+    },
+    "operation": "Compra",
+    "allocation": 2,
+    "name": "Ethereum",
+    "ticker": "ETH",
+    "type": "Cripto",
+    "amount_usd": 200.1016
+  },
+  {
+    "id": "TPdAqkjnq036BuTRT24y",
+    "created_time": {
+      "_seconds": 1649436540,
+      "_nanoseconds": 0
+    },
+    "amount": 15,
+    "allocation": 2.52,
+    "ticker": "DKNG",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 16.8,
+    "name": "DraftKings Inc.",
+    "amount_usd": 252,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "bp0V4Gq2SCsyXRNa8ytc"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "TTqRGFJawsqEhKEIoYO6",
+    "created_time": {
+      "_seconds": 1699628100,
+      "_nanoseconds": 0
+    },
+    "amount": 3.24,
+    "allocation": 5,
+    "ticker": "VBR",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 154.38,
+    "name": "Vanguard Small-Cap Value ETF",
+    "amount_usd": 500.19120000000004,
+    "type": "ETF",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "1nyKNXTRxJc0ca9hYOBN"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "TZM0lXOrcOmhprFZ3c8D",
+    "created_time": {
+      "_seconds": 1649719800,
+      "_nanoseconds": 0
+    },
+    "amount": 5,
+    "allocation": 5,
+    "ticker": "SOL",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 100,
+    "name": "Solana",
+    "amount_usd": 500,
+    "type": "Cripto",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "dBxC9hVCPQNBD77tSwD2"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "Tjj9QsxYfNWlmNrlxqG1",
+    "created_time": {
+      "_seconds": 1725378780,
+      "_nanoseconds": 0
+    },
+    "amount": 7.4092,
+    "allocation": 3,
+    "ticker": "COPX",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "6NqRdZAX2H1xJLpYlE19"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 40.49,
+    "name": "Global X Copper Miners ETF",
+    "amount_usd": 299.998508,
+    "type": "ETF",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "Qjt2CSBNR0CK5m0ztl0h"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "TubzYPHGiFkwWkaQ9rRt",
+    "created_time": {
+      "_seconds": 1715608560,
+      "_nanoseconds": 0
+    },
+    "amount": 103.0928,
+    "allocation": 10,
+    "ticker": "RIVN",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "6NqRdZAX2H1xJLpYlE19"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 9.7,
+    "name": "Rivian Automotive Inc.",
+    "amount_usd": 1000.0001599999999,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "kBLLwDQEuKIJUe9jgTDO"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "U8NfqYi0uQSUZ0KRg1IV",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "kNryG06ioY2JN3V4Dj2P"
+        ]
+      },
+      "_converter": {}
+    },
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "6NqRdZAX2H1xJLpYlE19"
+        ]
+      },
+      "_converter": {}
+    },
+    "amount": 12.6396,
+    "price": 47.47,
+    "created_time": {
+      "_seconds": 1734962220,
+      "_nanoseconds": 0
+    },
+    "operation": "Compra",
+    "allocation": 6,
+    "name": "Occidental Petroleum Corporation",
+    "ticker": "OXY",
+    "type": "Stock",
+    "amount_usd": 600.001812
+  },
+  {
+    "id": "UUYIKXYOX6hnlNF5i1pP",
+    "created_time": {
+      "_seconds": 1651763220,
+      "_nanoseconds": 0
+    },
+    "amount": 6,
+    "allocation": 2.15,
+    "ticker": "TDOC",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 35.8,
+    "name": "Teladoc Health Inc.",
+    "amount_usd": 214.79999999999998,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "WH8uaVQsTHpo8t29JqBr"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "UqyW2ulFpQxqQQoRESwh",
+    "created_time": {
+      "_seconds": 1741834260,
+      "_nanoseconds": 0
+    },
+    "amount": 0.1053,
+    "allocation": 2,
+    "ticker": "ETH",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 1900,
+    "name": "Ethereum",
+    "amount_usd": 200.07000000000002,
+    "type": "Cripto",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "GcNfBqs6RLwVPzfNIrNa"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "VCDTup06odNh4KLNbXrb",
+    "created_time": {
+      "_seconds": 1664462820,
+      "_nanoseconds": 0
+    },
+    "amount": 10,
+    "allocation": 3.27,
+    "ticker": "RIVN",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 32.75,
+    "name": "Rivian Automotive Inc.",
+    "amount_usd": 327.5,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "4nuqP0xzGonXCSd0cuQY"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "VTH3hEOiGiqLiiXPLv2g",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "oApjZIYzZjHT3VCBFm3R"
+        ]
+      },
+      "_converter": {}
+    },
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "amount": 1.7199,
+    "price": 116.29,
+    "created_time": {
+      "_seconds": 1741286520,
+      "_nanoseconds": 0
+    },
+    "operation": "Compra",
+    "allocation": 2,
+    "name": "Vistra Corp",
+    "ticker": "VST",
+    "type": "Stock",
+    "amount_usd": 200.007171
+  },
+  {
+    "id": "WMJpgVZzAPgMfjiKsw7U",
+    "created_time": {
+      "_seconds": 1650557280,
+      "_nanoseconds": 0
+    },
+    "amount": 5,
+    "allocation": 1.77,
+    "ticker": "RBLX",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 35.36,
+    "name": "Roblox Corp.",
+    "amount_usd": 176.8,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "RF8pADIIMmYk7ea5g703"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "X1X0qioberrNLafYrIm5",
+    "created_time": {
+      "_seconds": 1725891000,
+      "_nanoseconds": 0
+    },
+    "amount": 4.025,
+    "allocation": 4,
+    "ticker": "TLT",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 99.4,
+    "name": "iShare 20+ Year Treasury ",
+    "amount_usd": 400.08500000000004,
+    "type": "ETF",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "yYvyaqjnELkPp1p56vjz"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "X51mDhX2mrcLQVuR3csr",
+    "created_time": {
+      "_seconds": 1710163200,
+      "_nanoseconds": 0
+    },
+    "amount": 1830.5,
+    "allocation": 20,
+    "ticker": "EURUSD",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 1.0926,
+    "name": "Par EUR/USD",
+    "amount_usd": 2000.0043,
+    "type": "Forex",
+    "operation": "Venta",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "QUdCXSdhfqWfjF8XsV74"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "X9r9v6yNDN6f0vUJkAQH",
+    "created_time": {
+      "_seconds": 1672854120,
+      "_nanoseconds": 0
+    },
+    "allocation": 3.02,
+    "ticker": "BOIL",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "name": "ProShares Ultra Bloomberg Natural Gas",
+    "amount_usd": 302.4,
+    "type": "ETF",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "xrNHoCjBhJTC9Hmo9o8O"
+        ]
+      },
+      "_converter": {}
+    },
+    "amount": 1,
+    "price": 302.4
+  },
+  {
+    "id": "XZ5lZPPBMzbVDT6377FT",
+    "created_time": {
+      "_seconds": 1666622700,
+      "_nanoseconds": 0
+    },
+    "amount": 23,
+    "allocation": 2,
+    "ticker": "NIO",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 8.7,
+    "name": "Nio Inc.",
+    "amount_usd": 200.1,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "nxjADzt3yRJ35ITRaC9r"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "XseY5jeUmwBoP6T9xFXD",
+    "created_time": {
+      "_seconds": 1698071820,
+      "_nanoseconds": 0
+    },
+    "allocation": 2,
+    "ticker": "DKNG",
+    "amount": 7.17,
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 27.9,
+    "amount_usd": 200.04299999999998,
+    "name": "Draftkings Inc",
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "Nkv1Bt99Be1oFRCx4i5t"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "XxcKgEFKfX3B8D6oyPes",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "qKlJHCnygm4CpOstlwKG"
+        ]
+      },
+      "_converter": {}
+    },
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "6NqRdZAX2H1xJLpYlE19"
+        ]
+      },
+      "_converter": {}
+    },
+    "amount": 16.8919,
+    "price": 29.6,
+    "created_time": {
+      "_seconds": 1730748420,
+      "_nanoseconds": 0
+    },
+    "operation": "Compra",
+    "allocation": 5,
+    "name": "iShares Silver Trust",
+    "ticker": "SLV",
+    "type": "ETF",
+    "amount_usd": 500.00024
+  },
+  {
+    "id": "Y4dL59r1yF5qmPHaKqyn",
+    "created_time": {
+      "_seconds": 1655056020,
+      "_nanoseconds": 0
+    },
+    "amount": 10.498,
+    "allocation": 2,
+    "ticker": "AVAX",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 19.05,
+    "name": "Avalanche",
+    "amount_usd": 199.9869,
+    "type": "Cripto",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "bERuqGF8heX985Fc5xvl"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "YGo0AmhJbWTeKz2ZAzEo",
+    "created_time": {
+      "_seconds": 1651763040,
+      "_nanoseconds": 0
+    },
+    "amount": 163.82,
+    "allocation": 2.49,
+    "ticker": "MANA",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 1.52,
+    "name": "Decentraland",
+    "amount_usd": 249.00639999999999,
+    "type": "Cripto",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "HO5ppWvK0sXlBzS0wLQv"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "YHuuYiFu6xVBHY1gQwvb",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "oApjZIYzZjHT3VCBFm3R"
+        ]
+      },
+      "_converter": {}
+    },
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "amount": 1.359,
+    "price": 147.25,
+    "created_time": {
+      "_seconds": 1738161060,
+      "_nanoseconds": 0
+    },
+    "operation": "Compra",
+    "allocation": 2,
+    "name": "Vistra Corp",
+    "ticker": "VST",
+    "type": "Stock",
+    "amount_usd": 200.11275
+  },
+  {
+    "id": "YIwNQwJU2ftd2bWVWwp0",
+    "created_time": {
+      "_seconds": 1653055800,
+      "_nanoseconds": 0
+    },
+    "amount": 13,
+    "allocation": 3.11,
+    "ticker": "XPEV",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 23.9,
+    "name": "Xpeng Inc",
+    "amount_usd": 310.7,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "daRrTloaKxXGPKjAQ0Wn"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "YpyUpfueWerxUhgEArjV",
+    "created_time": {
+      "_seconds": 1721140920,
+      "_nanoseconds": 0
+    },
+    "amount": 2.2459,
+    "allocation": 5,
+    "ticker": "IWM",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "6NqRdZAX2H1xJLpYlE19"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 222.63,
+    "name": "iShares Russell 2000 ETF",
+    "amount_usd": 500.0047169999999,
+    "type": "ETF",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "abW6q6Khtmty8jGPSzDc"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "YtIcgqK9G0Q6mZOEDVt1",
+    "created_time": {
+      "_seconds": 1660055400,
+      "_nanoseconds": 0
+    },
+    "amount": 4,
+    "allocation": 6.83,
+    "ticker": "NVDA",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 170.85,
+    "name": "Nvidia Corp.",
+    "amount_usd": 683.4,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "jlIvjkEmNYfSVyn89POe"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "ZEa6tPo4QMskaCWOH0me",
+    "created_time": {
+      "_seconds": 1650911700,
+      "_nanoseconds": 0
+    },
+    "amount": 3,
+    "allocation": 3.21,
+    "ticker": "SQ",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 106.98,
+    "name": "Square Inc.",
+    "amount_usd": 320.94,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "Z1ppYVjEDHYwPO9Imr3k"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "ZHYuVkA28vq3THTATaMT",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "kNryG06ioY2JN3V4Dj2P"
+        ]
+      },
+      "_converter": {}
+    },
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "6NqRdZAX2H1xJLpYlE19"
+        ]
+      },
+      "_converter": {}
+    },
+    "amount": 10.5419,
+    "price": 47.43,
+    "created_time": {
+      "_seconds": 1733514960,
+      "_nanoseconds": 0
+    },
+    "operation": "Compra",
+    "allocation": 5,
+    "name": "Occidental Petroleum Corporation",
+    "ticker": "OXY",
+    "type": "Stock",
+    "amount_usd": 500.002317
+  },
+  {
+    "id": "ZmjCXdhQmu0fqi3m6Zir",
+    "created_time": {
+      "_seconds": 1654020900,
+      "_nanoseconds": 0
+    },
+    "amount": 6.4935,
+    "allocation": 3,
+    "ticker": "SOL",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 46.2,
+    "name": "Solana",
+    "amount_usd": 299.9997,
+    "type": "Cripto",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "dBxC9hVCPQNBD77tSwD2"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "aDxuUccYdhKYqEo8tNhb",
+    "created_time": {
+      "_seconds": 1711474740,
+      "_nanoseconds": 0
+    },
+    "amount": 10,
+    "allocation": 6.377,
+    "ticker": "OXY",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "6NqRdZAX2H1xJLpYlE19"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 63.77,
+    "name": "Occidental Petroleum Corporation",
+    "amount_usd": 637.7,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "kNryG06ioY2JN3V4Dj2P"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "aI8aQVgc4AjwJdiDTKKh",
+    "created_time": {
+      "_seconds": 1718115660,
+      "_nanoseconds": 0
+    },
+    "amount": 30.9981,
+    "allocation": 5,
+    "ticker": "GOLD",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "6NqRdZAX2H1xJLpYlE19"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 16.13,
+    "name": "Barrik Gold Corp",
+    "amount_usd": 499.999353,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "FCWemKHKofWlYH7AxoId"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "b9bmOwDsyZZO0cdm3KWR",
+    "created_time": {
+      "_seconds": 1664199000,
+      "_nanoseconds": 0
+    },
+    "allocation": 5.34,
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "name": "ProShares Ultra Bloomberg Natural Gas",
+    "amount_usd": 534.2,
+    "type": "ETF",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "xrNHoCjBhJTC9Hmo9o8O"
+        ]
+      },
+      "_converter": {}
+    },
+    "ticker": "BOIL",
+    "amount": 0.5,
+    "price": 1068.4
+  },
+  {
+    "id": "bt7d6mr1OXKvWwaLIm8Q",
+    "created_time": {
+      "_seconds": 1684855560,
+      "_nanoseconds": 0
+    },
+    "amount": 34,
+    "allocation": 2.9988,
+    "ticker": "NIO",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 8.82,
+    "name": "Nio Inc.",
+    "amount_usd": 299.88,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "nxjADzt3yRJ35ITRaC9r"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "crOmnbehXCLwnplxZ4hd",
+    "allocation": 3.9,
+    "ticker": "DKNG",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "name": "DraftKings Inc.",
+    "amount_usd": 390,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "bp0V4Gq2SCsyXRNa8ytc"
+        ]
+      },
+      "_converter": {}
+    },
+    "created_time": {
+      "_seconds": 1647961020,
+      "_nanoseconds": 0
+    },
+    "amount": 19.7368,
+    "price": 19.76
+  },
+  {
+    "id": "dC3Y9Q9gH5REZk8WaNnL",
+    "created_time": {
+      "_seconds": 1698071340,
+      "_nanoseconds": 0
+    },
+    "amount": 11.8,
+    "allocation": 2,
+    "ticker": "RIVN",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 16.95,
+    "name": "Rivian Automotive Inc.",
+    "amount_usd": 200.01,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "4nuqP0xzGonXCSd0cuQY"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "dZOqkEVGhGZiaqZQEWYG",
+    "created_time": {
+      "_seconds": 1697045340,
+      "_nanoseconds": 0
+    },
+    "allocation": 3,
+    "ticker": "EXAS",
+    "amount": 4.53,
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 66.25,
+    "name": "Exact Sciences Corporation",
+    "amount_usd": 300.1125,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "YmEpHBWYkiLRjmuabu9A"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "dgRQ2u6HHmqybcOdkjRW",
+    "created_time": {
+      "_seconds": 1652968200,
+      "_nanoseconds": 0
+    },
+    "amount": 11,
+    "allocation": 3.45,
+    "ticker": "PARA",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 31.42,
+    "name": "Paramount Global",
+    "amount_usd": 345.62,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "RtJX85322g2kV0nlRIRS"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "dvLx7oGaaMVSxTdEpbpF",
+    "created_time": {
+      "_seconds": 1647961200,
+      "_nanoseconds": 0
+    },
+    "allocation": 3.54,
+    "ticker": "PYPL",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "name": "PayPal Holdings Inc.",
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "HxVJrJ1DcuazguOrlov2"
+        ]
+      },
+      "_converter": {}
+    },
+    "amount": 2.99,
+    "price": 118.3,
+    "amount_usd": 353.717
+  },
+  {
+    "id": "eEGLY9LIjTsM6iUb47Ph",
+    "created_time": {
+      "_seconds": 1715608800,
+      "_nanoseconds": 0
+    },
+    "amount": 190.8397,
+    "allocation": 10,
+    "ticker": "NIO",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "6NqRdZAX2H1xJLpYlE19"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 5.24,
+    "name": "Nio Inc.",
+    "amount_usd": 1000.000028,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "p5BFnDdJGqCuCec7SMeZ"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "eFMGGCTEX3TGfxL3qZig",
+    "allocation": 2.45,
+    "ticker": "RBLX",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "name": "Roblox Corp.",
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "RF8pADIIMmYk7ea5g703"
+        ]
+      },
+      "_converter": {}
+    },
+    "created_time": {
+      "_seconds": 1647961320,
+      "_nanoseconds": 0
+    },
+    "amount": 4.99,
+    "price": 49.01,
+    "amount_usd": 244.5599
+  },
+  {
+    "id": "f01KRNPS9e8wHe94SaYp",
+    "created_time": {
+      "_seconds": 1652116500,
+      "_nanoseconds": 0
+    },
+    "amount": 0.0082,
+    "allocation": 2.5,
+    "ticker": "BTC",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 30500,
+    "name": "Bitcoin",
+    "amount_usd": 250.10000000000002,
+    "type": "Cripto",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "4CcKYqolrIE3HcFsfjTt"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "f0vK6kuhIteC2g6Q7Mc2",
+    "created_time": {
+      "_seconds": 1652190300,
+      "_nanoseconds": 0
+    },
+    "amount": 22,
+    "allocation": 2.45,
+    "ticker": "DKNG",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 11.12,
+    "name": "DraftKings Inc.",
+    "amount_usd": 244.64,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "bp0V4Gq2SCsyXRNa8ytc"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "f6AzJ45tSdCB0Dq2M8fP",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "qXvR5nupAJPQLCWMe1XE"
+        ]
+      },
+      "_converter": {}
+    },
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "amount": 0.802,
+    "price": 624.2,
+    "created_time": {
+      "_seconds": 1752154260,
+      "_nanoseconds": 0
+    },
+    "operation": "Venta",
+    "allocation": 5,
+    "name": "SPDR S&P 500",
+    "ticker": "SPY",
+    "type": "ETF",
+    "amount_usd": 500.6084000000001
+  },
+  {
+    "id": "fCVJiJgwti2YCBvk9OUv",
+    "created_time": {
+      "_seconds": 1650896220,
+      "_nanoseconds": 0
+    },
+    "amount": 4,
+    "allocation": 3.56,
+    "ticker": "AMD",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 89.21,
+    "name": "Advanced Micro Devices Inc.",
+    "amount_usd": 356.84,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "FVKlWplJYU8Xw8hjxw8f"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "fhtTajIqdbtPrlzRBHKc",
+    "created_time": {
+      "_seconds": 1725378660,
+      "_nanoseconds": 0
+    },
+    "amount": 7.0304,
+    "allocation": 5,
+    "ticker": "USO",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "6NqRdZAX2H1xJLpYlE19"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 71.12,
+    "name": "United States Oil Fund",
+    "amount_usd": 500.00204800000006,
+    "type": "ETF",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "MxfkMVYSr96qyW3L4vKj"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "fySTNaUUcFSPXPdS64bk",
+    "allocation": 3.22,
+    "ticker": "AAL",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "name": "American Airlines Group Inc.",
+    "amount_usd": 322,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "zmhbAnvZeIGqKT8NWNOK"
+        ]
+      },
+      "_converter": {}
+    },
+    "created_time": {
+      "_seconds": 1647961200,
+      "_nanoseconds": 0
+    },
+    "amount": 19.77,
+    "price": 16.28
+  },
+  {
+    "id": "g38RsGJZluni9UWpAEHT",
+    "created_time": {
+      "_seconds": 1712679480,
+      "_nanoseconds": 0
+    },
+    "amount": 10,
+    "allocation": 21.7,
+    "ticker": "GLD",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "6NqRdZAX2H1xJLpYlE19"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 216.96,
+    "name": "SPDR Gold Trust",
+    "amount_usd": 2169.6,
+    "type": "ETF",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "gp10PLb5uaTvipzl0uus"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "gkaTw2BSG99TfZnh7LuD",
+    "created_time": {
+      "_seconds": 1713809640,
+      "_nanoseconds": 0
+    },
+    "amount": 34.091,
+    "allocation": 3,
+    "ticker": "RIVN",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 8.8,
+    "name": "Rivian Automotive Inc.",
+    "amount_usd": 300.0008,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "4nuqP0xzGonXCSd0cuQY"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "hsQkZDlohgLJIv6ghdTb",
+    "created_time": {
+      "_seconds": 1699627980,
+      "_nanoseconds": 0
+    },
+    "amount": 6.38,
+    "allocation": 1,
+    "ticker": "XPEV",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 15.68,
+    "name": "Xpeng Inc",
+    "amount_usd": 100.0384,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "daRrTloaKxXGPKjAQ0Wn"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "hwRxr6LuK9PTDAE6lFSt",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "aKZu4YqwZxcaMYrnIkDp"
+        ]
+      },
+      "_converter": {}
+    },
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "amount": 3.4771,
+    "price": 86.28,
+    "created_time": {
+      "_seconds": 1756218000,
+      "_nanoseconds": 0
+    },
+    "operation": "Compra",
+    "allocation": 3,
+    "name": "iShare 20+ Year Treasury",
+    "ticker": "TLT",
+    "type": "ETF",
+    "amount_usd": 300.004188
+  },
+  {
+    "id": "i1Lw35FnPoKRDF5oVbmj",
+    "created_time": {
+      "_seconds": 1678302360,
+      "_nanoseconds": 0
+    },
+    "amount": 14,
+    "allocation": 2.08,
+    "ticker": "RIVN",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 14.86,
+    "name": "Rivian Automotive Inc.",
+    "amount_usd": 208.04,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "4nuqP0xzGonXCSd0cuQY"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "iCv1PwQx8oX3xHtmREOn",
+    "created_time": {
+      "_seconds": 1725897300,
+      "_nanoseconds": 0
+    },
+    "amount": 17.6243,
+    "allocation": 10,
+    "ticker": "CVS",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "6NqRdZAX2H1xJLpYlE19"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 56.74,
+    "name": "CVS Health Corporation",
+    "amount_usd": 1000.0027820000001,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "cha1RWTXQWNeUIm84sHP"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "ifvkHH9yz9Dh5oaKO5BC",
+    "created_time": {
+      "_seconds": 1708623600,
+      "_nanoseconds": 0
+    },
+    "amount": 35,
+    "allocation": 4,
+    "ticker": "RIVN",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 11.43,
+    "name": "Rivian Automotive Inc.",
+    "amount_usd": 400.05,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "4nuqP0xzGonXCSd0cuQY"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "jLAu9ow07BJycNu3FN0o",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "RhtkyrZ54tYIlq8qmyKC"
+        ]
+      },
+      "_converter": {}
+    },
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "amount": 3.055,
+    "price": 98.2,
+    "created_time": {
+      "_seconds": 1741963440,
+      "_nanoseconds": 0
+    },
+    "operation": "Compra",
+    "allocation": 3,
+    "name": "ConocoPhillips",
+    "ticker": "COP",
+    "type": "Stock",
+    "amount_usd": 300.00100000000003
+  },
+  {
+    "id": "jQVDvPM2PE1eAmTF91RC",
+    "created_time": {
+      "_seconds": 1724085420,
+      "_nanoseconds": 0
+    },
+    "amount": 15.1,
+    "allocation": 3,
+    "ticker": "PENN",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 19.88,
+    "name": "Penn Entertainment Inc",
+    "amount_usd": 300.188,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "3310kAY7DrvUh2BNL9dI"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "jcPIou9eLWAADTmAEAaD",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "MzRXpXfQjDHrdIw6IYEt"
+        ]
+      },
+      "_converter": {}
+    },
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "6NqRdZAX2H1xJLpYlE19"
+        ]
+      },
+      "_converter": {}
+    },
+    "amount": 15.124,
+    "price": 16.54,
+    "created_time": {
+      "_seconds": 1737140520,
+      "_nanoseconds": 0
+    },
+    "operation": "Compra",
+    "allocation": 2.5,
+    "name": "Zim Integrated Shipping Services",
+    "ticker": "ZIM",
+    "type": "Stock",
+    "amount_usd": 250.15096
+  },
+  {
+    "id": "juBy2nGZnavowAZ6Dhd8",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "beRJfPVXOI8hHjV8QMbY"
+        ]
+      },
+      "_converter": {}
+    },
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "6NqRdZAX2H1xJLpYlE19"
+        ]
+      },
+      "_converter": {}
+    },
+    "amount": 5.1589,
+    "price": 96.92,
+    "created_time": {
+      "_seconds": 1739899860,
+      "_nanoseconds": 0
+    },
+    "operation": "Compra",
+    "allocation": 5,
+    "name": "ConocoPhillips",
+    "ticker": "COP",
+    "type": "Stock",
+    "amount_usd": 500.000588
+  },
+  {
+    "id": "kgCVGLegR24aV1RP0Db0",
+    "created_time": {
+      "_seconds": 1652309400,
+      "_nanoseconds": 0
+    },
+    "amount": 200,
+    "allocation": 2.5,
+    "ticker": "SAND",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 1.25,
+    "name": "The Sandbox",
+    "amount_usd": 250,
+    "type": "Cripto",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "mPQnMbT1EnClLo5DNOKT"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "lH2cIAIYU0ry6u7FX6rH",
+    "created_time": {
+      "_seconds": 1651864140,
+      "_nanoseconds": 0
+    },
+    "amount": 4,
+    "allocation": 3.58,
+    "ticker": "BABA",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 89.5,
+    "name": "Alibaba Group Holdings Ltd.",
+    "amount_usd": 358,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "3KF7OySNFwtljgAK3YsO"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "m4iLuV3tcjwwM9CCOz5Q",
+    "ticker": "NIO",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "name": "Nio Inc.",
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "nxjADzt3yRJ35ITRaC9r"
+        ]
+      },
+      "_converter": {}
+    },
+    "allocation": 3.17,
+    "amount": 14.63,
+    "price": 21.66,
+    "created_time": {
+      "_seconds": 1647961020,
+      "_nanoseconds": 0
+    },
+    "amount_usd": 317
+  },
+  {
+    "id": "ncpPXWqlXzo0P1Kpu97K",
+    "created_time": {
+      "_seconds": 1650911460,
+      "_nanoseconds": 0
+    },
+    "amount": 3,
+    "allocation": 2.65,
+    "ticker": "SE",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 88.51,
+    "name": "Sea Ltd.",
+    "amount_usd": 265.53000000000003,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "xp4acHdV2AAfTHpWThTS"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "oaNQg3aHOZyC8R9N6gKg",
+    "created_time": {
+      "_seconds": 1711028580,
+      "_nanoseconds": 0
+    },
+    "amount": 1.91022,
+    "allocation": 10,
+    "ticker": "SPY",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 523.5,
+    "name": "SPDR S&P 500 ETF",
+    "amount_usd": 1000.00017,
+    "type": "ETF",
+    "operation": "Venta",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "Y2dcKOmgwCRLGz7GM9mt"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "paWyvUHfQXerxuLtDtWs",
+    "created_time": {
+      "_seconds": 1678302300,
+      "_nanoseconds": 0
+    },
+    "ticker": "SPCE",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "name": "Virgin Galactic",
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "kuLXp3cUdjnOivxJTXrM"
+        ]
+      },
+      "_converter": {}
+    },
+    "allocation": 3,
+    "amount": 2.803738317757009,
+    "price": 107,
+    "amount_usd": 300
+  },
+  {
+    "id": "pbJzYYul3ruCBmi3JdPS",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "kyv9oIvSkGscCcsP1vT8"
+        ]
+      },
+      "_converter": {}
+    },
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "amount": 7.6,
+    "price": 32.9,
+    "created_time": {
+      "_seconds": 1745333340,
+      "_nanoseconds": 0
+    },
+    "operation": "Compra",
+    "allocation": 2.5,
+    "name": "DraftKings Inc",
+    "ticker": "DKNG",
+    "type": "Stock",
+    "amount_usd": 250.03999999999996
+  },
+  {
+    "id": "poE9NHjWiTOtSbPYsC2C",
+    "allocation": 3.48,
+    "ticker": "TDOC",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "name": "Teladoc Health Inc.",
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "WH8uaVQsTHpo8t29JqBr"
+        ]
+      },
+      "_converter": {}
+    },
+    "created_time": {
+      "_seconds": 1647961260,
+      "_nanoseconds": 0
+    },
+    "amount": 4.98,
+    "price": 69.81,
+    "amount_usd": 347.6538
+  },
+  {
+    "id": "qtFNq8euOnGJbozGZhct",
+    "created_time": {
+      "_seconds": 1704987840,
+      "_nanoseconds": 0
+    },
+    "amount": 159.58,
+    "allocation": 3,
+    "ticker": "CHPT",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 1.88,
+    "name": "ChargePoint Holdings, Inc",
+    "amount_usd": 300.0104,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "qn01gTlQRdqIOq5CMftM"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "qycjS9A5n7eYzZjRqIzl",
+    "created_time": {
+      "_seconds": 1650384120,
+      "_nanoseconds": 0
+    },
+    "amount": 231.48,
+    "allocation": 5,
+    "ticker": "MANA",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 2.16,
+    "name": "Decentraland",
+    "amount_usd": 499.9968,
+    "type": "Cripto",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "HO5ppWvK0sXlBzS0wLQv"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "rKybd6zWOXVL2wPVG9FW",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "Qjt2CSBNR0CK5m0ztl0h"
+        ]
+      },
+      "_converter": {}
+    },
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "6NqRdZAX2H1xJLpYlE19"
+        ]
+      },
+      "_converter": {}
+    },
+    "amount": 7.515,
+    "price": 39.92,
+    "created_time": {
+      "_seconds": 1737129480,
+      "_nanoseconds": 0
+    },
+    "operation": "Compra",
+    "allocation": 3,
+    "name": "Global X Copper Miners ETF",
+    "ticker": "COPX",
+    "type": "ETF",
+    "amount_usd": 299.9988
+  },
+  {
+    "id": "rcOalPQVt3vRLhjjqp5g",
+    "created_time": {
+      "_seconds": 1650896160,
+      "_nanoseconds": 0
+    },
+    "ticker": "PENN",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 37.65,
+    "name": "PENN Entertainment Inc.",
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "IPXGUUJbHKe8FQzDRc9o"
+        ]
+      },
+      "_converter": {}
+    },
+    "allocation": 3,
+    "amount": 7.9681,
+    "amount_usd": 299.9989
+  },
+  {
+    "id": "rizxL9Ion3MeRRaw8TPi",
+    "created_time": {
+      "_seconds": 1754405400,
+      "_nanoseconds": 0
+    },
+    "amount": 1.121,
+    "allocation": 4,
+    "ticker": "CVNA",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 357,
+    "name": "Caravana inc",
+    "amount_usd": 400.197,
+    "type": "Stock",
+    "operation": "Venta",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "VdIbgy827FVYo5jDSp3B"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "rwdzJVZAiM1trH5SwJRV",
+    "created_time": {
+      "_seconds": 1656016380,
+      "_nanoseconds": 0
+    },
+    "amount": 0.1326,
+    "allocation": 1.5,
+    "ticker": "ETH",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 1131.82,
+    "name": "Ethereum",
+    "amount_usd": 150.079332,
+    "type": "Cripto",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "z7LR41LyqjpIEjiWbs2n"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "sNRwK788kAoE2niotnyf",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "9xZfUWKKuHiz5QxyXL2L"
+        ]
+      },
+      "_converter": {}
+    },
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "6NqRdZAX2H1xJLpYlE19"
+        ]
+      },
+      "_converter": {}
+    },
+    "amount": 4.9157,
+    "price": 610.29,
+    "created_time": {
+      "_seconds": 1739900100,
+      "_nanoseconds": 0
+    },
+    "operation": "Venta",
+    "allocation": 30,
+    "name": "SPDR S&P 500 ETF Trust",
+    "ticker": "SPY",
+    "type": "ETF",
+    "amount_usd": 3000.002553
+  },
+  {
+    "id": "sQ9rq4xNlZisIvSxp1sU",
+    "created_time": {
+      "_seconds": 1651767780,
+      "_nanoseconds": 0
+    },
+    "amount": 4,
+    "allocation": 3.61,
+    "ticker": "ETSY",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 90.2,
+    "name": "Etsy Inc.",
+    "amount_usd": 360.8,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "GNhCSpuHatv5Rez3vohN"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "sdIXLFWDOLSAcfO79fc6",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "kNryG06ioY2JN3V4Dj2P"
+        ]
+      },
+      "_converter": {}
+    },
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "6NqRdZAX2H1xJLpYlE19"
+        ]
+      },
+      "_converter": {}
+    },
+    "amount": 9.6974,
+    "price": 51.56,
+    "created_time": {
+      "_seconds": 1732219860,
+      "_nanoseconds": 0
+    },
+    "operation": "Compra",
+    "allocation": 5,
+    "name": "Occidental Petroleum Corporation",
+    "ticker": "OXY",
+    "type": "Stock",
+    "amount_usd": 499.997944
+  },
+  {
+    "id": "stMR6fPelig9R4rQ3UTz",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "qXvR5nupAJPQLCWMe1XE"
+        ]
+      },
+      "_converter": {}
+    },
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "amount": 3.31,
+    "price": 605.27,
+    "created_time": {
+      "_seconds": 1750777980,
+      "_nanoseconds": 0
+    },
+    "operation": "Venta",
+    "allocation": 20,
+    "name": "SPDR S&P 500",
+    "ticker": "SPY",
+    "type": "ETF",
+    "amount_usd": 2003.4437
+  },
+  {
+    "id": "tOZzQsk9eSzk1MvRlCR7",
+    "created_time": {
+      "_seconds": 1650985560,
+      "_nanoseconds": 0
+    },
+    "amount": 3,
+    "allocation": 3.5,
+    "ticker": "DIS",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 116.77,
+    "name": "Walt Disney Company",
+    "amount_usd": 350.31,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "jR6yLRKng9U9JTLFuaCK"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "uMNKkTyj65J9qtwsgakh",
+    "created_time": {
+      "_seconds": 1726507920,
+      "_nanoseconds": 0
+    },
+    "amount": 25.1383,
+    "allocation": 20,
+    "ticker": "GDX",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "6NqRdZAX2H1xJLpYlE19"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 39.78,
+    "name": "VanEck Gold Miners ETF",
+    "amount_usd": 1000.0015740000001,
+    "type": "ETF",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "Sqqv9Rr1YnAjPfuOPhWC"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "uXRBFBR0Z4GGkHR71MqM",
+    "created_time": {
+      "_seconds": 1678888800,
+      "_nanoseconds": 0
+    },
+    "amount": 5.3,
+    "allocation": 3,
+    "ticker": "SCHW",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 56.73,
+    "name": "Charles Schwab Corporation",
+    "amount_usd": 300.669,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "Y3g3Atio46cXYnpazZjQ"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "vED5JUBDEjQqE9ZV4qhp",
+    "created_time": {
+      "_seconds": 1670949420,
+      "_nanoseconds": 0
+    },
+    "amount": 0.01124,
+    "allocation": 2,
+    "ticker": "BTC",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 17800,
+    "name": "Bitcoin",
+    "amount_usd": 200.072,
+    "type": "Cripto",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "4CcKYqolrIE3HcFsfjTt"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "vMT1cfvR4qHkEJ9dIrBO",
+    "created_time": {
+      "_seconds": 1725378420,
+      "_nanoseconds": 0
+    },
+    "amount": 15.3296,
+    "allocation": 3,
+    "ticker": "GOLD",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "6NqRdZAX2H1xJLpYlE19"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 19.57,
+    "name": "Barrik Gold Corp",
+    "amount_usd": 300.000272,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "FCWemKHKofWlYH7AxoId"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "vgyqrlqE7Vdk8xFD8Zgm",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "kNryG06ioY2JN3V4Dj2P"
+        ]
+      },
+      "_converter": {}
+    },
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "6NqRdZAX2H1xJLpYlE19"
+        ]
+      },
+      "_converter": {}
+    },
+    "amount": 4.8095,
+    "price": 51.98,
+    "created_time": {
+      "_seconds": 1737122340,
+      "_nanoseconds": 0
+    },
+    "operation": "Compra",
+    "allocation": 2.5,
+    "name": "Occidental Petroleum Corporation",
+    "ticker": "OXY",
+    "type": "Stock",
+    "amount_usd": 249.99781
+  },
+  {
+    "id": "wOW7GTK4WPqjCoAKWvWq",
+    "created_time": {
+      "_seconds": 1712680440,
+      "_nanoseconds": 0
+    },
+    "amount": 150,
+    "allocation": 26.97,
+    "ticker": "GOLD",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "6NqRdZAX2H1xJLpYlE19"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 17.98,
+    "name": "Barrik Gold Corp",
+    "amount_usd": 2697,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "FCWemKHKofWlYH7AxoId"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "wYG8NV9JsUUYQcZEoxJp",
+    "created_time": {
+      "_seconds": 1652703900,
+      "_nanoseconds": 0
+    },
+    "amount": 0.1246,
+    "allocation": 2.5,
+    "ticker": "ETH",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 2006,
+    "name": "Ethereum",
+    "amount_usd": 249.9476,
+    "type": "Cripto",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "z7LR41LyqjpIEjiWbs2n"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "wmcc8hyrsRA52KbKzdGi",
+    "ticker": "BOIL",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "name": "ProShares Ultra Bloomberg Natural Gas",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "xrNHoCjBhJTC9Hmo9o8O"
+        ]
+      },
+      "_converter": {}
+    },
+    "created_time": {
+      "_seconds": 1666111980,
+      "_nanoseconds": 0
+    },
+    "allocation": 2.06,
+    "amount_usd": 206,
+    "type": "Stock",
+    "amount": 0.25,
+    "price": 824
+  },
+  {
+    "id": "wnQ0H1EHymJhVx6Qz8fc",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "vDdidNx01OZFbX4BX9Wd"
+        ]
+      },
+      "_converter": {}
+    },
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "6NqRdZAX2H1xJLpYlE19"
+        ]
+      },
+      "_converter": {}
+    },
+    "amount": 1.5399,
+    "price": 324.7,
+    "created_time": {
+      "_seconds": 1739899740,
+      "_nanoseconds": 0
+    },
+    "operation": "Compra",
+    "allocation": 5,
+    "name": "Constellation Energy Corp",
+    "ticker": "CEG",
+    "type": "Stock",
+    "amount_usd": 500.00553
+  },
+  {
+    "id": "x91OFg830t6w77jHB2OU",
+    "created_time": {
+      "_seconds": 1652190300,
+      "_nanoseconds": 0
+    },
+    "amount": 2,
+    "allocation": 2.35,
+    "ticker": "ABNB",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 117.3,
+    "name": "Airbnb Inc.",
+    "amount_usd": 234.6,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "khUpy0JfL7ZpsBfKTjzQ"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "xXHVINQSG4nUcKW7R9kR",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "sGbXvKJmdhRaAT4arOI4"
+        ]
+      },
+      "_converter": {}
+    },
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "6NqRdZAX2H1xJLpYlE19"
+        ]
+      },
+      "_converter": {}
+    },
+    "amount": 4.7277,
+    "price": 105.76,
+    "created_time": {
+      "_seconds": 1734967320,
+      "_nanoseconds": 0
+    },
+    "operation": "Compra",
+    "allocation": 5,
+    "name": "Exxon Mobil Corp",
+    "ticker": "XOM",
+    "type": "Stock",
+    "amount_usd": 500.001552
+  },
+  {
+    "id": "yGR0I4xnEp8z8OntCfWy",
+    "created_time": {
+      "_seconds": 1691155920,
+      "_nanoseconds": 0
+    },
+    "amount": 17.143,
+    "allocation": 3,
+    "ticker": "LMND",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 17.5,
+    "name": "Lemonade Inc.",
+    "amount_usd": 300.0025,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "E5wQ3iE7v08swD0yYRSn"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "ygpxOeYTdmrgz9Lae4ES",
+    "created_time": {
+      "_seconds": 1650645000,
+      "_nanoseconds": 0
+    },
+    "amount": 0.01268,
+    "allocation": 5,
+    "ticker": "BTC",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 39451,
+    "name": "Bitcoin",
+    "amount_usd": 500.23868,
+    "type": "Cripto",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "4CcKYqolrIE3HcFsfjTt"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "ygq2foOciYRgMqNfJXPd",
+    "created_time": {
+      "_seconds": 1653395700,
+      "_nanoseconds": 0
+    },
+    "amount": 99,
+    "allocation": 1,
+    "ticker": "MANA",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 1.016,
+    "name": "Decentraland",
+    "amount_usd": 100.584,
+    "type": "Cripto",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "HO5ppWvK0sXlBzS0wLQv"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "yheastuxS3ECqa8UbqVy",
+    "created_time": {
+      "_seconds": 1666204500,
+      "_nanoseconds": 0
+    },
+    "amount": 28,
+    "allocation": 3.01,
+    "ticker": "NIO",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 10.76,
+    "name": "Nio Inc.",
+    "amount_usd": 301.28,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "nxjADzt3yRJ35ITRaC9r"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "yqQHzgFG2uSwDpoGmgtT",
+    "created_time": {
+      "_seconds": 1653395820,
+      "_nanoseconds": 0
+    },
+    "amount": 3.53,
+    "allocation": 1,
+    "ticker": "AVAX",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 28.4,
+    "name": "Avalanche",
+    "amount_usd": 100.252,
+    "type": "Cripto",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "bERuqGF8heX985Fc5xvl"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "zJ23qTPdZY8vHVdw0oEs",
+    "created_time": {
+      "_seconds": 1651841100,
+      "_nanoseconds": 0
+    },
+    "amount": 2.45,
+    "allocation": 2,
+    "ticker": "SOL",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 81.9,
+    "name": "Solana",
+    "amount_usd": 200.65500000000003,
+    "type": "Cripto",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "dBxC9hVCPQNBD77tSwD2"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "zrc26CtrCx0KBot8efkd",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "4gcg6y54iA29v1snyBbN"
+        ]
+      },
+      "_converter": {}
+    },
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "amount": 3.36,
+    "price": 89.44,
+    "created_time": {
+      "_seconds": 1746711060,
+      "_nanoseconds": 0
+    },
+    "operation": "Compra",
+    "allocation": 3,
+    "name": "Shopify",
+    "ticker": "SHOP",
+    "type": "Stock",
+    "amount_usd": 300.5184
+  },
+  {
+    "id": "zs6S4eIyQLTfTuoe8HAq",
+    "created_time": {
+      "_seconds": 1652026200,
+      "_nanoseconds": 0
+    },
+    "amount": 3.08,
+    "allocation": 2,
+    "ticker": "LUNA",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 65,
+    "name": "Luna",
+    "amount_usd": 200.20000000000002,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "OO97x6r5LjPJaytZJTTd"
+        ]
+      },
+      "_converter": {}
+    }
+  },
+  {
+    "id": "zw3VNIdIjUJjl27EeW7X",
+    "created_time": {
+      "_seconds": 1649357460,
+      "_nanoseconds": 0
+    },
+    "amount": 6,
+    "allocation": 4.4,
+    "ticker": "WYNN",
+    "id_portfolio": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "portfolio",
+          "Kq0kpiyAuukdS2l4uvDb"
+        ]
+      },
+      "_converter": {}
+    },
+    "price": 73.4,
+    "name": "Wynn Resorts Ltc.",
+    "amount_usd": 440.40000000000003,
+    "type": "Stock",
+    "operation": "Compra",
+    "id_asset": {
+      "_firestore": {
+        "projectId": "bitfinapp-4b003"
+      },
+      "_path": {
+        "segments": [
+          "asset_position",
+          "VyZ7GKR3WKmbZyDYXbE8"
+        ]
+      },
+      "_converter": {}
+    }
+  }
+]

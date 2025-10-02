@@ -5,7 +5,7 @@ export interface Trade {
   symbol: string;
   quantity: number;
   price: number;
-  side: 'Compra' | 'Cierre';
+  side: 'Compra' | 'Cierre' | 'Venta';
   commission: number;
   pnl?: number;
 }
