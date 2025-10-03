@@ -112,7 +112,7 @@ export async function calculateMarkToMarketCumulativePnL(
 ): Promise<CumulativePnLPoint[]> {
   try {
     // Get monthly portfolio history with mark-to-market values
-    const portfolioHistory = await calculateMonthlyPortfolioHistory(transactionPortfolioJson, closedTransactionsJson);
+    const portfolioHistory = await calculateMonthlyPortfolioHistory(transactionPortfolioJson, closedTransactionsJson, onProgress);
 
     const points: CumulativePnLPoint[] = [];
 
@@ -558,6 +558,7 @@ function generateMonthRange(startDate: Date, endDate: Date): string[] {
 export async function calculateMonthlyPortfolioHistory(
   transactionPortfolioJson: FirebaseTransaction[],
   closedTransactionsJson: FirebaseTransaction[],
+  onProgress?: (current: number, total: number, currentMonth: string) => void
 ): Promise<PortfolioHistory> {
   const TARGET_PORTFOLIO_ID = 'Kq0kpiyAuukdS2l4uvDb';
 
@@ -588,10 +589,16 @@ export async function calculateMonthlyPortfolioHistory(
     };
   } = {};
 
-  for (const monthKey of monthRange) {
+  for (let i = 0; i < monthRange.length; i++) {
+    const monthKey = monthRange[i];
     const [year, month] = monthKey.split('-').map(Number);
     const monthStart = new Date(year, month - 1, 1);
     const monthEnd = new Date(year, month, 0, 23, 59, 59);
+
+    // Report progress
+    if (onProgress) {
+      onProgress(i + 1, monthRange.length, monthKey);
+    }
 
     // Process transactions that happened up to this month
     const transactionsThisMonth = allTransactions.filter(t => {

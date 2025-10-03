@@ -63,6 +63,9 @@ const Index = () => {
           const markToMarketData = await calculateMarkToMarketCumulativePnL(
             transactionPortfolioData,
             closedTransactionsData,
+            (current, total, currentMonth) => {
+              setProgressData({ current, total, currentMonth });
+            }
           );
           setCumulativePnLData(markToMarketData);
           console.log('Mark-to-market data loaded:', markToMarketData.length, 'points');
@@ -73,6 +76,7 @@ const Index = () => {
           setCumulativePnLData(fallbackData);
         } finally {
           setLoadingMarkToMarket(false);
+          setProgressData({ current: 0, total: 0, currentMonth: '' });
         }
       } catch (error) {
         console.error('Error loading trades:', error);
@@ -102,6 +106,23 @@ const Index = () => {
             <p className="text-muted-foreground font-medium">
               {loadingMarkToMarket ? 'Calculando rendimiento histórico...' : 'Cargando datos del portafolio...'}
             </p>
+            {loadingMarkToMarket && progressData.total > 0 && (
+              <div className="space-y-2 w-64 mx-auto">
+                <div className="flex justify-between text-sm text-muted-foreground">
+                  <span>{progressData.currentMonth}</span>
+                  <span>{progressData.current}/{progressData.total}</span>
+                </div>
+                <div className="w-full bg-muted rounded-full h-2">
+                  <div 
+                    className="bg-success h-2 rounded-full transition-all duration-300" 
+                    style={{ width: `${(progressData.current / progressData.total) * 100}%` }}
+                  ></div>
+                </div>
+                <div className="text-xs text-center text-muted-foreground">
+                  {Math.round((progressData.current / progressData.total) * 100)}% completado
+                </div>
+              </div>
+            )}
             <div className="flex justify-center gap-1">
               <div className="w-2 h-2 bg-success rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
               <div className="w-2 h-2 bg-success rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
