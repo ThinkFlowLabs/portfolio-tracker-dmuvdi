@@ -1,7 +1,7 @@
 {
   "name": "bitfin-portfolio-tracker",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.5.0",
   "description": "Panel de control profesional para tracking de portfolio de trading",
   "type": "module",
   "scripts": {
