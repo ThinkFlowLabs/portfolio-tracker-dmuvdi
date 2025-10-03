@@ -165,13 +165,29 @@ const Index = () => {
         <div className="container mx-auto px-4 py-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4 fade-in">
-              <div className="bg-gradient-to-br from-success/30 to-success/10 p-3 rounded-xl border border-success/20 shadow-lg">
-                <TrendingUp className="h-7 w-7 text-success drop-shadow-lg" />
+              <div className="flex items-center gap-3">
+                <img
+                  src="https://bitfin-app-reports.vercel.app/logo-32.png"
+                  alt="Bitfin Logo"
+                  className="w-8 h-8 rounded-lg shadow-lg"
+                  onError={e => {
+                    // Fallback al icono original si la imagen no carga
+                    e.currentTarget.style.display = 'none';
+                    const fallback = e.currentTarget.nextElementSibling as HTMLElement;
+                    if (fallback) fallback.style.display = 'block';
+                  }}
+                />
+                <div
+                  className="bg-gradient-to-br from-success/30 to-success/10 p-3 rounded-xl border border-success/20 shadow-lg"
+                  style={{ display: 'none' }}>
+                  <TrendingUp className="h-7 w-7 text-success drop-shadow-lg" />
+                </div>
               </div>
               <div>
                 <h1 className="text-3xl font-bold text-foreground tracking-tight">Portafolio Privado Daniel Muvdi</h1>
                 <p className="text-muted-foreground text-sm font-medium mt-0.5">
-                  Panel de rendimiento de trading en tiempo real
+                  <span className="text-success font-semibold">Bitfin</span> Panel de rendimiento de trading en tiempo
+                  real
                 </p>
               </div>
             </div>

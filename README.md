@@ -1,73 +1,116 @@
-# Welcome to your Lovable project
+# Bitfin Portfolio Tracker
 
-## Project info
+Panel de control profesional para tracking de portfolio de trading con análisis avanzado de rendimiento.
 
-**URL**: https://lovable.dev/projects/fe75d1be-1a98-4f74-b1ca-987b0f034051
+## Características
 
-## How can I edit this code?
+- 📊 **Análisis completo de rendimiento**: Estadísticas detalladas de trading
+- 📈 **Visualización avanzada**: Gráficos interactivos de P&L acumulativo
+- 💰 **Tracking en tiempo real**: Precios actualizados y cálculos mark-to-market
+- 🎯 **Métricas profesionales**: Win rate, profit factor, drawdown analysis
+- 📱 **PWA Ready**: Instalable como aplicación móvil
 
-There are several ways of editing your application.
+## Tecnologías
 
-**Use Lovable**
+- React + TypeScript
+- Vite
+- TailwindCSS
+- Shadcn/ui
+- Recharts
+- Firebase Data Integration
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/fe75d1be-1a98-4f74-b1ca-987b0f034051) and start prompting.
+## Desarrollo Local
 
-Changes made via Lovable will be committed automatically to this repo.
+### Requisitos
 
-**Use your preferred IDE**
+- Node.js 18+ y npm instalados
+- Acceso a los archivos JSON de Firebase (transaction_portfolio.json, closed_transactions.json)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Instalación
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+```bash
+# Clonar el repositorio
+git clone https://github.com/ThinkFlowLabs/portfolio-tracker-dmuvdi.git
 
-Follow these steps:
+# Navegar al directorio del proyecto
+cd portfolio-tracker-dmuvdi
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Instalar dependencias
+npm install
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Iniciar servidor de desarrollo
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+La aplicación estará disponible en `http://localhost:8080`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Scripts Disponibles
 
-**Use GitHub Codespaces**
+```bash
+npm run dev          # Servidor de desarrollo
+npm run build        # Build para producción
+npm run preview      # Preview del build
+npm run lint         # Linter ESLint
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Estructura del Proyecto
 
-## What technologies are used for this project?
+```
+src/
+├── components/
+│   ├── portfolio/          # Componentes específicos del portfolio
+│   │   ├── CumulativePnLChart.tsx
+│   │   ├── StatsGrid.tsx
+│   │   ├── TradesTable.tsx
+│   │   └── MonthlyCharts.tsx
+│   └── ui/                 # Componentes UI base (shadcn)
+├── lib/
+│   ├── tradeCalculations.ts    # Lógica de cálculos
+│   ├── dataLogger.ts          # Sistema de logging
+│   └── utils.ts               # Utilidades
+├── types/
+│   └── trade.ts               # Tipos TypeScript
+└── pages/
+    └── Index.tsx              # Página principal
+```
 
-This project is built with:
+## API Integration
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+La aplicación consume datos de:
 
-## How can I deploy this project?
+- **Firebase JSON**: Datos de transacciones y portfolio
+- **Bitfin Server API**: Precios históricos (`https://bitfinserver-production.up.railway.app`)
 
-Simply open [Lovable](https://lovable.dev/projects/fe75d1be-1a98-4f74-b1ca-987b0f034051) and click on Share -> Publish.
+## Features Principales
 
-## Can I connect a custom domain to my Lovable project?
+### 📊 Análisis de Performance
 
-Yes, you can!
+- Cálculo de P&L acumulativo mark-to-market
+- Estadísticas de trading (win rate, profit factor)
+- Análisis mensual de rendimiento
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+### 📈 Visualización
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+- Gráficos interactivos con Recharts
+- Vista en USD y porcentaje
+- Responsive design
+
+### 📋 Data Management
+
+- Sistema de logging completo
+- Exportación de datos de cálculo
+- Tracking de API calls y performance
+
+## Deployment
+
+El proyecto está configurado para deployment en Vercel/Netlify:
+
+```bash
+npm run build
+```
+
+Los archivos se generan en `dist/` listos para servir estáticamente.
+
+## Licencia
+
+Este proyecto es privado y pertenece a Bitfin App.
