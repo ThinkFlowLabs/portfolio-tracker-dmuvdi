@@ -177,41 +177,41 @@ class DataLogger {
 
   logParsedTrades(trades: Trade[]) {
     this.logData.processedData.parsedTrades = trades;
-    console.log(`🔄 Parsed Trades:`, trades.length);
+    //console.log(`🔄 Parsed Trades:`, trades.length);
   }
 
   logMonthlyHistory(history: PortfolioHistory) {
     this.logData.processedData.monthlyHistory = history;
-    console.log(`📅 Monthly History:`, {
+    /*console.log(`📅 Monthly History:`, {
       portfolio: history.portfolio,
       months: history.history.length,
-    });
+    });*/
   }
 
   logCumulativePnL(data: CumulativePnLPoint[]) {
     this.logData.processedData.cumulativePnLData = data;
-    console.log(`📈 Cumulative P&L Data:`, data.length, 'points');
+    //console.log(`📈 Cumulative P&L Data:`, data.length, 'points');
   }
 
   logTradingStats(stats: TradeStats) {
     this.logData.processedData.tradingStats = stats;
-    console.log(`📊 Trading Statistics:`, {
+    /*console.log(`📊 Trading Statistics:`, {
       totalTrades: stats.totalTrades,
       winRate: `${stats.winRate.toFixed(1)}%`,
       totalPnL: `$${stats.totalPnL.toFixed(2)}`,
       winningTrades: stats.winningTrades,
       losingTrades: stats.losingTrades,
-    });
+    });*/
   }
 
   logMonthlyPerformance(performance: MonthlyPerformance[]) {
     this.logData.processedData.monthlyPerformance = performance;
-    console.log(`📈 Monthly Performance:`, performance.length, 'months');
+    //console.log(`📈 Monthly Performance:`, performance.length, 'months');
   }
 
   logTotalInvested(totalInvested: number) {
     this.logData.processedData.totalInvested = totalInvested;
-    console.log(`💰 Total Invested:`, `$${totalInvested.toFixed(2)}`);
+    //console.log(`💰 Total Invested:`, `$${totalInvested.toFixed(2)}`);
   }
 
   logPositionTracking(
@@ -265,7 +265,7 @@ class DataLogger {
       duration,
     });
 
-    console.log(`🌐 API Call:`, { endpoint, duration: `${duration}ms` });
+    //console.log(`🌐 API Call:`, { endpoint, duration: `${duration}ms` });
   }
 
   logError(error: string, context: string) {
@@ -312,7 +312,7 @@ class DataLogger {
       processingTime,
     };
 
-    console.log(`📋 Summary:`, this.logData.summary);
+    //console.log(`📋 Summary:`, this.logData.summary);
   }
 
   async generateLogFile(): Promise<void> {
@@ -334,7 +334,7 @@ class DataLogger {
       // Clean up
       URL.revokeObjectURL(url);
 
-      console.log(`💾 Log file generated: portfolio-calculation-log-${this.logData.sessionId}.txt`);
+      console.log(`💾 Log file generated: log-session-${this.logData.sessionId}.txt`);
     } catch (error) {
       console.error('Error generating log file:', error);
     }

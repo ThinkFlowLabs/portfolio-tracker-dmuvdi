@@ -169,10 +169,19 @@ export function calculateTotalInvested(trades: Trade[]): number {
 export function calculateStats(trades: Trade[]): TradeStats {
   const tradesWithPnL = calculatePnL(trades);
 
-  // Include all closed positions (Cierre/Venta with P&L)
-  const closingTrades = tradesWithPnL.filter(
-    t => (t.side === 'Cierre' || t.side === 'Venta') && t.pnl !== undefined && t.pnl !== 0,
-  );
+  // Include all closed positions (Cierre/Venta with P&L) with sanity check
+  const closingTrades = tradesWithPnL.filter(t => {
+    const hasValidPnL = (t.side === 'Cierre' || t.side === 'Venta') && t.pnl !== undefined && t.pnl !== 0;
+
+    // SANITY CHECK: Same filter as monthly performance
+    const reasonablePnL = Math.abs(t.pnl || 0) <= 3000;
+
+    if (hasValidPnL && !reasonablePnL) {
+      console.warn(`⚠️ Excluding suspicious P&L from stats: ${t.symbol} ${t.side} $${t.pnl?.toFixed(2)} on ${t.date}`);
+    }
+
+    return hasValidPnL && reasonablePnL;
+  });
 
   const totalPnL = closingTrades.reduce((sum, t) => sum + (t.pnl || 0), 0);
   const winningTrades = closingTrades.filter(t => (t.pnl || 0) > 0);
@@ -210,20 +219,27 @@ export function calculateStats(trades: Trade[]): TradeStats {
 export function calculateMonthlyPerformance(trades: Trade[]): MonthlyPerformance[] {
   const tradesWithPnL = calculatePnL(trades);
 
-  // Filter trades that generate realized P&L (both closing longs and shorts)
-  const realizingTrades = tradesWithPnL.filter(t => {
-    // Include any trade that has actual P&L (positive or negative)
-    // This captures:
-    // - Cierre: Always closes a position
-    // - Venta: When closing a long position (generates P&L)
-    // - Compra: When closing a short position (generates P&L)
-    return t.pnl !== undefined && t.pnl !== 0 && Math.abs(t.pnl) > 0.01; // Ignore tiny commission-only P&L
+  // Filter trades that generate realized P&L (closing trades only)
+  const closingTrades = tradesWithPnL.filter(t => {
+    // Only include trades that CLOSE positions and have actual P&L
+    const hasValidPnL =
+      (t.side === 'Cierre' || t.side === 'Venta') && t.pnl !== undefined && t.pnl !== 0 && Math.abs(t.pnl) > 0.01;
+
+    // SANITY CHECK: Filter out abnormally high P&L trades that are likely data errors
+    // For a portfolio of ~$10-15k, individual trade P&L > $3k is suspicious
+    const reasonablePnL = Math.abs(t.pnl || 0) <= 3000;
+
+    if (hasValidPnL && !reasonablePnL) {
+      console.warn(`⚠️ Filtering out suspicious P&L: ${t.symbol} ${t.side} $${t.pnl?.toFixed(2)} on ${t.date}`);
+    }
+
+    return hasValidPnL && reasonablePnL;
   });
 
   const monthlyData: { [month: string]: { trades: number; pnl: number } } = {};
 
-  // Count ALL trades (Compra, Venta, Cierre) for trade count
-  for (const trade of tradesWithPnL) {
+  // Group by month when positions were CLOSED (realized P&L)
+  for (const trade of closingTrades) {
     const date = new Date(trade.date);
     const monthKey = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}`;
 
@@ -232,16 +248,7 @@ export function calculateMonthlyPerformance(trades: Trade[]): MonthlyPerformance
     }
 
     monthlyData[monthKey].trades += 1;
-  }
-
-  // Add P&L only from trades that realize gains/losses
-  for (const trade of realizingTrades) {
-    const date = new Date(trade.date);
-    const monthKey = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}`;
-
-    if (monthlyData[monthKey]) {
-      monthlyData[monthKey].pnl += trade.pnl || 0;
-    }
+    monthlyData[monthKey].pnl += trade.pnl || 0;
   }
 
   return Object.entries(monthlyData)
@@ -507,6 +514,8 @@ async function getBatchHistoricalPrices(
           return 'crypto';
         case 'Accion':
           return 'stock';
+        case 'ETF':
+          return 'etf';
         case 'Forex':
           return 'forex';
         default:
