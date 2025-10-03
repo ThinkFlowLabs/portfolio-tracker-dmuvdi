@@ -12,6 +12,9 @@ interface CumulativePnLChartProps {
 export function CumulativePnLChart({ data, currentPnL, totalInvested }: CumulativePnLChartProps) {
   const [viewMode, setViewMode] = useState<'absolute' | 'percentage'>('absolute');
   const STARTING_EQUITY = 10000;
+  console.log('Total Invested ' + totalInvested);
+  console.log('Current PnL ' + currentPnL);
+  console.log('Data ' + JSON.stringify(data));
 
   const formatCurrency = (value: number) => {
     return `USD $${new Intl.NumberFormat('en-US', {
@@ -30,27 +33,25 @@ export function CumulativePnLChart({ data, currentPnL, totalInvested }: Cumulati
   };
 
   const currentPnLPercentage = totalInvested > 0 ? (currentPnL / totalInvested) * 100 : 0;
-
   // Add starting point and convert data based on view mode
-  const chartData = viewMode === 'absolute'
-    ? [
-        { date: 'Start', value: STARTING_EQUITY },
-        ...data.map(point => ({
-          date: point.date,
-          value: STARTING_EQUITY + point.value
-        }))
-      ]
-    : [
-        { date: 'Start', value: 0 },
-        ...data.map(point => ({
-          date: point.date,
-          value: totalInvested > 0 ? (point.value / totalInvested) * 100 : 0
-        }))
-      ];
+  const chartData =
+    viewMode === 'absolute'
+      ? [
+          { date: 'Start', value: 0 },
+          ...data.map(point => ({
+            date: point.date,
+            value: point.value, // Show actual cumulative P&L, not equity
+          })),
+        ]
+      : [
+          { date: 'Start', value: 0 },
+          ...data.map(point => ({
+            date: point.date,
+            value: totalInvested > 0 ? (point.value / totalInvested) * 100 : 0,
+          })),
+        ];
 
-  const displayValue = viewMode === 'absolute'
-    ? formatCurrency(STARTING_EQUITY + currentPnL)
-    : formatPercentage(currentPnLPercentage);
+  const displayValue = viewMode === 'absolute' ? formatCurrency(currentPnL) : formatPercentage(currentPnLPercentage);
 
   return (
     <Card className="border-border bg-card premium-card shadow-premium overflow-hidden">
@@ -68,8 +69,7 @@ export function CumulativePnLChart({ data, currentPnL, totalInvested }: Cumulati
                     viewMode === 'absolute'
                       ? 'bg-success/20 text-success shadow-md border border-success/30'
                       : 'text-muted-foreground hover:text-foreground hover:bg-card/50'
-                  }`}
-                >
+                  }`}>
                   USD
                 </button>
                 <button
@@ -78,14 +78,14 @@ export function CumulativePnLChart({ data, currentPnL, totalInvested }: Cumulati
                     viewMode === 'percentage'
                       ? 'bg-success/20 text-success shadow-md border border-success/30'
                       : 'text-muted-foreground hover:text-foreground hover:bg-card/50'
-                  }`}
-                >
+                  }`}>
                   %
                 </button>
               </div>
-              <span className={`text-3xl font-bold tracking-tight transition-all duration-300 ${
-                currentPnL >= 0 ? 'text-success glow-success' : 'text-destructive glow-destructive'
-              }`}>
+              <span
+                className={`text-3xl font-bold tracking-tight transition-all duration-300 ${
+                  currentPnL >= 0 ? 'text-success glow-success' : 'text-destructive glow-destructive'
+                }`}>
                 {displayValue}
               </span>
             </div>
@@ -97,8 +97,8 @@ export function CumulativePnLChart({ data, currentPnL, totalInvested }: Cumulati
           <LineChart data={chartData}>
             <defs>
               <linearGradient id="colorPnL" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="hsl(var(--success))" stopOpacity={0.3}/>
-                <stop offset="95%" stopColor="hsl(var(--success))" stopOpacity={0}/>
+                <stop offset="5%" stopColor="hsl(var(--success))" stopOpacity={0.3} />
+                <stop offset="95%" stopColor="hsl(var(--success))" stopOpacity={0} />
               </linearGradient>
             </defs>
             <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" opacity={0.3} />
@@ -123,22 +123,16 @@ export function CumulativePnLChart({ data, currentPnL, totalInvested }: Cumulati
                 color: 'hsl(var(--foreground))',
                 backdropFilter: 'blur(16px)',
                 boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3)',
-                padding: '12px 16px'
+                padding: '12px 16px',
               }}
               formatter={(value: number) => [
                 viewMode === 'absolute' ? formatCurrency(value) : formatPercentage(value),
-                'P&L'
+                'P&L',
               ]}
               labelFormatter={formatDate}
               cursor={{ stroke: 'hsl(var(--success))', strokeWidth: 1, strokeDasharray: '5 5' }}
             />
-            <Area
-              type="monotone"
-              dataKey="value"
-              stroke="none"
-              fill="url(#colorPnL)"
-              animationDuration={1500}
-            />
+            <Area type="monotone" dataKey="value" stroke="none" fill="url(#colorPnL)" animationDuration={1500} />
             <Line
               type="monotone"
               dataKey="value"
@@ -150,7 +144,7 @@ export function CumulativePnLChart({ data, currentPnL, totalInvested }: Cumulati
                 fill: 'hsl(var(--success))',
                 stroke: 'hsl(var(--background))',
                 strokeWidth: 3,
-                filter: 'drop-shadow(0 0 12px rgba(16, 185, 129, 0.8))'
+                filter: 'drop-shadow(0 0 12px rgba(16, 185, 129, 0.8))',
               }}
               animationDuration={1500}
               filter="drop-shadow(0 0 8px rgba(16, 185, 129, 0.4))"

@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
-import { Trade } from '@/types/trade';
+import { Trade, CumulativePnLPoint } from '@/types/trade';
 import {
   calculateCumulativePnL,
+  calculateMarkToMarketCumulativePnL,
   calculateStats,
   calculateMonthlyPerformance,
   calculateTotalInvested,
@@ -16,7 +17,10 @@ import { TrendingUp } from 'lucide-react';
 
 const Index = () => {
   const [trades, setTrades] = useState<Trade[]>([]);
+  const [cumulativePnLData, setCumulativePnLData] = useState<CumulativePnLPoint[]>([]);
   const [loading, setLoading] = useState(true);
+  const [loadingMarkToMarket, setLoadingMarkToMarket] = useState(false);
+  const [progressData, setProgressData] = useState({ current: 0, total: 0, currentMonth: '' });
 
   useEffect(() => {
     const loadTrades = async () => {
@@ -51,6 +55,25 @@ const Index = () => {
 
         setTrades(parsedTrades);
         localStorage.setItem('portfolio-trades', JSON.stringify(parsedTrades));
+
+        // Calculate mark-to-market cumulative P&L
+        setLoadingMarkToMarket(true);
+        try {
+          console.log('Calculating mark-to-market data...');
+          const markToMarketData = await calculateMarkToMarketCumulativePnL(
+            transactionPortfolioData,
+            closedTransactionsData,
+          );
+          setCumulativePnLData(markToMarketData);
+          console.log('Mark-to-market data loaded:', markToMarketData.length, 'points');
+        } catch (error) {
+          console.error('Error calculating mark-to-market data:', error);
+          // Fallback to traditional calculation
+          const fallbackData = calculateCumulativePnL(parsedTrades);
+          setCumulativePnLData(fallbackData);
+        } finally {
+          setLoadingMarkToMarket(false);
+        }
       } catch (error) {
         console.error('Error loading trades:', error);
       } finally {
@@ -76,7 +99,9 @@ const Index = () => {
             <div className="absolute inset-0 animate-ping rounded-full h-16 w-16 border-2 border-success/30 mx-auto"></div>
           </div>
           <div className="space-y-2">
-            <p className="text-muted-foreground font-medium">Cargando datos del portafolio...</p>
+            <p className="text-muted-foreground font-medium">
+              {loadingMarkToMarket ? 'Calculando rendimiento histórico...' : 'Cargando datos del portafolio...'}
+            </p>
             <div className="flex justify-center gap-1">
               <div className="w-2 h-2 bg-success rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
               <div className="w-2 h-2 bg-success rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
@@ -88,11 +113,10 @@ const Index = () => {
     );
   }
 
-  const cumulativePnL = calculateCumulativePnL(trades);
   const stats = calculateStats(trades);
   const monthlyPerformance = calculateMonthlyPerformance(trades);
   const totalInvested = calculateTotalInvested(trades);
-  const currentPnL = cumulativePnL.length > 0 ? cumulativePnL[cumulativePnL.length - 1].value : 0;
+  const currentPnL = cumulativePnLData.length > 0 ? cumulativePnLData[cumulativePnLData.length - 1].value : 0;
 
   return (
     <div className="min-h-screen">
@@ -120,7 +144,7 @@ const Index = () => {
       <main className="container mx-auto px-4 py-8 space-y-8">
         {/* Cumulative P&L Chart - Hero Section */}
         <div className="fade-in" style={{ animationDelay: '100ms' }}>
-          <CumulativePnLChart data={cumulativePnL} currentPnL={currentPnL} totalInvested={totalInvested} />
+          <CumulativePnLChart data={cumulativePnLData} currentPnL={currentPnL} totalInvested={totalInvested} />
         </div>
 
         {/* Stats Grid */}
