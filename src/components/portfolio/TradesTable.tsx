@@ -35,11 +35,12 @@ export function TradesTable({ trades }: TradesTableProps) {
     let comparison = 0;
 
     switch (sortField) {
-      case 'date':
+      case 'date': {
         const dateA = new Date(`${a.date} ${a.time}`);
         const dateB = new Date(`${b.date} ${b.time}`);
         comparison = dateA.getTime() - dateB.getTime();
         break;
+      }
       case 'symbol':
         comparison = a.symbol.localeCompare(b.symbol);
         break;
@@ -49,11 +50,12 @@ export function TradesTable({ trades }: TradesTableProps) {
       case 'price':
         comparison = a.price - b.price;
         break;
-      case 'pnl':
+      case 'pnl': {
         const pnlA = a.pnl ?? -Infinity;
         const pnlB = b.pnl ?? -Infinity;
         comparison = pnlA - pnlB;
         break;
+      }
     }
 
     return sortDirection === 'asc' ? comparison : -comparison;
@@ -63,17 +65,16 @@ export function TradesTable({ trades }: TradesTableProps) {
     if (sortField !== field) {
       return <ArrowUpDown className="ml-1 h-4 w-4 opacity-50" />;
     }
-    return sortDirection === 'asc'
-      ? <ArrowUp className="ml-1 h-4 w-4" />
-      : <ArrowDown className="ml-1 h-4 w-4" />;
+    return sortDirection === 'asc' ? <ArrowUp className="ml-1 h-4 w-4" /> : <ArrowDown className="ml-1 h-4 w-4" />;
   };
 
   return (
     <Card className="border-border bg-card premium-card shadow-premium overflow-hidden">
       <CardHeader>
         <CardTitle className="text-sm uppercase tracking-wider font-semibold text-muted-foreground">
-          All Trades ({sortedTrades.length})
+          📋 Historial Completo de Transacciones ({sortedTrades.length})
         </CardTitle>
+        <p className="text-xs text-muted-foreground mt-1">Incluye todas las compras, ventas y cierres de posiciones</p>
       </CardHeader>
       <CardContent>
         <div className="overflow-x-auto rounded-lg">
@@ -82,8 +83,7 @@ export function TradesTable({ trades }: TradesTableProps) {
               <TableRow className="border-border bg-secondary/30">
                 <TableHead
                   className="text-xs uppercase tracking-wider text-muted-foreground cursor-pointer select-none hover:text-success transition-all duration-300"
-                  onClick={() => handleSort('date')}
-                >
+                  onClick={() => handleSort('date')}>
                   <div className="flex items-center font-semibold">
                     Date
                     <SortIcon field="date" />
@@ -94,8 +94,7 @@ export function TradesTable({ trades }: TradesTableProps) {
                 </TableHead>
                 <TableHead
                   className="text-xs uppercase tracking-wider text-muted-foreground cursor-pointer select-none hover:text-success transition-all duration-300"
-                  onClick={() => handleSort('symbol')}
-                >
+                  onClick={() => handleSort('symbol')}>
                   <div className="flex items-center font-semibold">
                     Symbol
                     <SortIcon field="symbol" />
@@ -103,8 +102,7 @@ export function TradesTable({ trades }: TradesTableProps) {
                 </TableHead>
                 <TableHead
                   className="text-xs uppercase tracking-wider text-muted-foreground text-right cursor-pointer select-none hover:text-success transition-all duration-300"
-                  onClick={() => handleSort('quantity')}
-                >
+                  onClick={() => handleSort('quantity')}>
                   <div className="flex items-center justify-end font-semibold">
                     Quantity
                     <SortIcon field="quantity" />
@@ -112,8 +110,7 @@ export function TradesTable({ trades }: TradesTableProps) {
                 </TableHead>
                 <TableHead
                   className="text-xs uppercase tracking-wider text-muted-foreground text-right cursor-pointer select-none hover:text-success transition-all duration-300"
-                  onClick={() => handleSort('price')}
-                >
+                  onClick={() => handleSort('price')}>
                   <div className="flex items-center justify-end font-semibold">
                     Price
                     <SortIcon field="price" />
@@ -124,8 +121,7 @@ export function TradesTable({ trades }: TradesTableProps) {
                 </TableHead>
                 <TableHead
                   className="text-xs uppercase tracking-wider text-muted-foreground text-right cursor-pointer select-none hover:text-success transition-all duration-300"
-                  onClick={() => handleSort('pnl')}
-                >
+                  onClick={() => handleSort('pnl')}>
                   <div className="flex items-center justify-end font-semibold">
                     P&L
                     <SortIcon field="pnl" />
@@ -141,8 +137,7 @@ export function TradesTable({ trades }: TradesTableProps) {
                     border-border transition-all duration-300 striped-row
                     hover:bg-gradient-to-r hover:from-secondary/40 hover:to-transparent
                     hover:shadow-md hover:scale-[1.01] hover:z-10
-                  `}
-                >
+                  `}>
                   <TableCell className="text-foreground font-medium">{trade.date}</TableCell>
                   <TableCell className="text-muted-foreground text-sm">{trade.time}</TableCell>
                   <TableCell className="text-foreground font-bold">
@@ -157,23 +152,30 @@ export function TradesTable({ trades }: TradesTableProps) {
                     {formatCurrency(trade.price)}
                   </TableCell>
                   <TableCell>
-                    <span className={`
+                    <span
+                      className={`
                       px-3 py-1.5 rounded-md text-xs font-semibold uppercase tracking-wide
                       transition-all duration-300 inline-block
-                      ${trade.side === 'Compra'
-                        ? 'bg-gradient-to-r from-success/20 to-success/10 text-success border border-success/30'
-                        : 'bg-gradient-to-r from-destructive/20 to-destructive/10 text-destructive border border-destructive/30'
+                      ${
+                        trade.side === 'Compra'
+                          ? 'bg-gradient-to-r from-success/20 to-success/10 text-success border border-success/30'
+                          : 'bg-gradient-to-r from-destructive/20 to-destructive/10 text-destructive border border-destructive/30'
                       }
                     `}>
                       {trade.side}
                     </span>
                   </TableCell>
-                  <TableCell className={`
+                  <TableCell
+                    className={`
                     text-right font-bold text-base transition-all duration-300
-                    ${trade.pnl === undefined ? 'text-muted-foreground' :
-                      trade.pnl > 0 ? 'text-success' :
-                      trade.pnl < 0 ? 'text-destructive' :
-                      'text-muted-foreground'
+                    ${
+                      trade.pnl === undefined
+                        ? 'text-muted-foreground'
+                        : trade.pnl > 0
+                        ? 'text-success'
+                        : trade.pnl < 0
+                        ? 'text-destructive'
+                        : 'text-muted-foreground'
                     }
                   `}>
                     {trade.pnl !== undefined ? formatCurrency(trade.pnl) : '-'}

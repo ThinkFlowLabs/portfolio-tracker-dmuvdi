@@ -136,37 +136,19 @@ export async function calculateMarkToMarketCumulativePnL(
       const [year, month] = monthData.month.split('-').map(Number);
       const lastDay = new Date(year, month, 0).getDate();
       const dateStr = `${month.toString().padStart(2, '0')}/${lastDay.toString().padStart(2, '0')}/${year}`;
-      const monthEnd = new Date(year, month, 0, 23, 59, 59);
 
-      // Calculate cumulative realized P&L up to this month (from closed trades)
-      const realizedPnL = tradesWithPnL
-        .filter(t => {
-          const tradeDate = new Date(t.date);
-          return tradeDate <= monthEnd && t.pnl !== undefined && t.pnl !== 0;
-        })
-        .reduce((sum, t) => sum + (t.pnl || 0), 0);
+      // CORRECCIÓN: Usar solo el P&L del portfolio actual (que ya incluye todo el historial)
+      // portfolio_pl ya es el P&L total de las posiciones abiertas en ese momento
+      // No necesitamos sumar P&L realizado porque eso causaría doble contabilidad
 
-      // portfolio_pl is ONLY unrealized P&L on open positions at month-end
-      // Total equity = Starting Capital + Cumulative Realized P&L + Unrealized P&L
-      const unrealizedPnL = monthData.portfolio_pl;
-      const totalEquity = STARTING_EQUITY + realizedPnL + unrealizedPnL;
-
-      // Store as P&L (equity - starting capital) for compatibility with chart
-      const cumulativePnL = totalEquity - STARTING_EQUITY;
+      const portfolioPnL = monthData.portfolio_pl;
 
       points.push({
         date: dateStr,
-        value: cumulativePnL,
+        value: portfolioPnL,
       });
-
-      console.log(
-        `${dateStr}: Equity=$${totalEquity.toFixed(2)}, Realized=$${realizedPnL.toFixed(
-          2,
-        )}, Unrealized=$${unrealizedPnL.toFixed(2)}, Total P&L=$${cumulativePnL.toFixed(2)}`,
-      );
     }
 
-    console.log(`Generated ${points.length} mark-to-market data points`);
     return points;
   } catch (error) {
     console.error('Error calculating mark-to-market cumulative P&L:', error);
@@ -186,6 +168,8 @@ export function calculateTotalInvested(trades: Trade[]): number {
 
 export function calculateStats(trades: Trade[]): TradeStats {
   const tradesWithPnL = calculatePnL(trades);
+
+  // Include all closed positions (Cierre/Venta with P&L)
   const closingTrades = tradesWithPnL.filter(
     t => (t.side === 'Cierre' || t.side === 'Venta') && t.pnl !== undefined && t.pnl !== 0,
   );
@@ -534,7 +518,6 @@ async function getBatchHistoricalPrices(
     // Prepare symbols array using real asset type information
     const symbols = tickerInfo.map(info => {
       const apiType = convertAssetType(info.assetType);
-      console.log(`${info.ticker} from Firebase type "${info.assetType}" -> API type "${apiType}"`);
       return {
         symbol: info.ticker,
         type: apiType,
@@ -545,9 +528,6 @@ async function getBatchHistoricalPrices(
       symbols: symbols,
       date: dateStr,
     };
-
-    console.log(`Fetching batch prices for ${tickerInfo.length} symbols on ${dateStr}`);
-    console.log('Symbol types:', symbols.map(s => `${s.symbol}:${s.type}`).join(', '));
 
     const startTime = Date.now();
     const response = await fetch('https://bitfinserver-production.up.railway.app/api/tickers/historical-prices/date', {
@@ -587,8 +567,6 @@ async function getBatchHistoricalPrices(
 
           priceMap[priceData.symbol] = priceData.price;
           dataLogger.logPriceData(priceData.symbol, dateStr, priceData.price);
-
-          console.log(`✅ Got price for ${priceData.symbol} (${symbolInfo?.type}) on ${dateStr}: $${priceData.price}`);
         } else {
           console.warn(`No price data for ${priceData.symbol} on ${dateStr}`);
           dataLogger.logError(`No price data found`, `${priceData.symbol} on ${dateStr}`);
@@ -596,7 +574,6 @@ async function getBatchHistoricalPrices(
         }
       }
 
-      console.log(`Batch API: ${data.pricesFound}/${data.totalTickers} prices found for ${dateStr}`);
       return priceMap;
     } else {
       console.warn(`No batch price data for ${dateStr}`);
@@ -765,8 +742,6 @@ export async function calculateMonthlyPortfolioHistory(
     dataLogger.logPositionTracking(monthKey, currentPositions);
 
     if (openPositions.length > 0) {
-      console.log(`Processing ${openPositions.length} open positions for ${monthKey}`);
-
       // Get ticker info with asset types for this month
       const tickerInfoMap = new Map<string, string>();
       openPositions.forEach(([_, position]) => {
@@ -797,12 +772,6 @@ export async function calculateMonthlyPortfolioHistory(
             profitLoss = (priceClose - avgPrice) * Math.abs(position.shares);
           }
 
-          console.log(
-            `${position.ticker}: ${position.isShort ? 'SHORT' : 'LONG'} - Avg: $${avgPrice.toFixed(
-              2,
-            )}, Close: $${priceClose}, P&L: $${profitLoss.toFixed(2)}`,
-          );
-
           monthlyAssets.push({
             asset: position.ticker,
             id_asset: id_asset,
@@ -822,10 +791,6 @@ export async function calculateMonthlyPortfolioHistory(
     }
 
     if (monthlyAssets.length > 0) {
-      console.log(
-        `${monthKey}: Portfolio Value: $${portfolioValue.toFixed(2)}, Portfolio P&L: $${portfolioPL.toFixed(2)}`,
-      );
-
       // Log monthly calculation details
       dataLogger.logMonthlyCalculation(monthKey, {
         openPositions: openPositions.length,

@@ -32,14 +32,10 @@ const Index = () => {
         // Clear localStorage to force fresh load
         localStorage.removeItem('portfolio-trades');
 
-        console.log('Loading JSON files...');
-
         const [transactionPortfolioResponse, closedTransactionsResponse] = await Promise.all([
           fetch('/transaction_portfolio.json'),
           fetch('/closed_transactions.json'),
         ]);
-
-        console.log('Fetch responses:', transactionPortfolioResponse.status, closedTransactionsResponse.status);
 
         if (!transactionPortfolioResponse.ok || !closedTransactionsResponse.ok) {
           throw new Error('Failed to fetch JSON files');
@@ -47,9 +43,6 @@ const Index = () => {
 
         const transactionPortfolioData = await transactionPortfolioResponse.json();
         const closedTransactionsData = await closedTransactionsResponse.json();
-
-        console.log('Transaction portfolio count:', transactionPortfolioData.length);
-        console.log('Closed transactions count:', closedTransactionsData.length);
 
         // Log raw data
         dataLogger.logRawData(transactionPortfolioData, closedTransactionsData);
@@ -59,17 +52,12 @@ const Index = () => {
         // Log parsed trades
         dataLogger.logParsedTrades(parsedTrades);
 
-        console.log('Parsed trades count:', parsedTrades.length);
-        console.log('First 3 trades:', parsedTrades.slice(0, 3));
-        console.log('Last 3 trades:', parsedTrades.slice(-3));
-
         setTrades(parsedTrades);
         localStorage.setItem('portfolio-trades', JSON.stringify(parsedTrades));
 
         // Calculate mark-to-market cumulative P&L
         setLoadingMarkToMarket(true);
         try {
-          console.log('Calculating mark-to-market data...');
           const markToMarketData = await calculateMarkToMarketCumulativePnL(
             transactionPortfolioData,
             closedTransactionsData,
@@ -81,7 +69,6 @@ const Index = () => {
 
           // Log cumulative P&L data
           dataLogger.logCumulativePnL(markToMarketData);
-          console.log('Mark-to-market data loaded:', markToMarketData.length, 'points');
         } catch (error) {
           console.error('Error calculating mark-to-market data:', error);
           dataLogger.logError(String(error), 'calculateMarkToMarketCumulativePnL');
@@ -160,6 +147,17 @@ const Index = () => {
   const totalInvested = calculateTotalInvested(trades);
   const currentPnL = cumulativePnLData.length > 0 ? cumulativePnLData[cumulativePnLData.length - 1].value : 0;
 
+  // Log all calculated statistics to dataLogger
+  dataLogger.logTradingStats(stats);
+  dataLogger.logMonthlyPerformance(monthlyPerformance);
+  dataLogger.logTotalInvested(totalInvested);
+
+  // Create corrected stats using mark-to-market data
+  const correctedStats = {
+    ...stats,
+    totalPnL: currentPnL, // Use corrected P&L from mark-to-market
+  };
+
   return (
     <div className="min-h-screen">
       {/* Header with Glass-morphism */}
@@ -184,7 +182,7 @@ const Index = () => {
                 title="Descargar log de cálculos (solo manual)">
                 📊 Descargar Log
               </button>
-              <AddTradeDialog onAddTrade={handleAddTrade} />
+              {/* <AddTradeDialog onAddTrade={handleAddTrade} /> */}
             </div>
           </div>
         </div>
@@ -199,7 +197,7 @@ const Index = () => {
 
         {/* Stats Grid */}
         <div className="fade-in" style={{ animationDelay: '200ms' }}>
-          <StatsGrid stats={stats} />
+          <StatsGrid stats={correctedStats} />
         </div>
 
         {/* Monthly Charts */}

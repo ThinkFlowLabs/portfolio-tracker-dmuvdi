@@ -12,9 +12,6 @@ interface CumulativePnLChartProps {
 export function CumulativePnLChart({ data, currentPnL, totalInvested }: CumulativePnLChartProps) {
   const [viewMode, setViewMode] = useState<'absolute' | 'percentage'>('absolute');
   const STARTING_EQUITY = 10000;
-  console.log('Total Invested ' + totalInvested);
-  console.log('Current PnL ' + currentPnL);
-  console.log('Data ' + JSON.stringify(data));
 
   const formatCurrency = (value: number) => {
     return `USD $${new Intl.NumberFormat('en-US', {
@@ -32,7 +29,7 @@ export function CumulativePnLChart({ data, currentPnL, totalInvested }: Cumulati
     return date.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
   };
 
-  const currentPnLPercentage = (currentPnL / STARTING_EQUITY) * 100;
+  const currentPnLPercentage = totalInvested > 0 ? (currentPnL / totalInvested) * 100 : 0;
   // Add starting point and convert data based on view mode
   const chartData =
     viewMode === 'absolute'
@@ -40,18 +37,19 @@ export function CumulativePnLChart({ data, currentPnL, totalInvested }: Cumulati
           { date: 'Start', value: STARTING_EQUITY },
           ...data.map(point => ({
             date: point.date,
-            value: STARTING_EQUITY + point.value, // Show equity: starting capital + cumulative P&L
+            value: STARTING_EQUITY + point.value,
           })),
         ]
       : [
           { date: 'Start', value: 0 },
           ...data.map(point => ({
             date: point.date,
-            value: (point.value / STARTING_EQUITY) * 100, // % return based on starting equity
+            value: totalInvested > 0 ? (point.value / totalInvested) * 100 : 0,
           })),
         ];
 
-  const displayValue = viewMode === 'absolute' ? formatCurrency(currentPnL) : formatPercentage(currentPnLPercentage);
+  const displayValue =
+    viewMode === 'absolute' ? formatCurrency(STARTING_EQUITY + currentPnL) : formatPercentage(currentPnLPercentage);
 
   return (
     <Card className="border-border bg-card premium-card shadow-premium overflow-hidden">
@@ -59,7 +57,7 @@ export function CumulativePnLChart({ data, currentPnL, totalInvested }: Cumulati
         <CardTitle className="text-foreground">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
             <span className="text-sm uppercase tracking-wider font-semibold text-muted-foreground">
-              Gross Cumulative P&L
+              📈 P&L Total del Portafolio (Posiciones Abiertas + Cerradas)
             </span>
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-2 bg-secondary/50 p-1 rounded-lg border border-border/50 backdrop-blur-sm">

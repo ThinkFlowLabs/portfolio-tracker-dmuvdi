@@ -1,4 +1,4 @@
-import { Trade, CumulativePnLPoint } from '@/types/trade';
+import { Trade, CumulativePnLPoint, TradeStats, MonthlyPerformance } from '@/types/trade';
 
 interface FirestoreTimestamp {
   _seconds: number;
@@ -90,6 +90,9 @@ interface LogData {
     parsedTrades: Trade[];
     monthlyHistory: PortfolioHistory;
     cumulativePnLData: CumulativePnLPoint[];
+    tradingStats: TradeStats | null;
+    monthlyPerformance: MonthlyPerformance[] | null;
+    totalInvested: number | null;
   };
   calculations: {
     positionTracking: PositionTrackingEntry[];
@@ -134,6 +137,9 @@ class DataLogger {
         parsedTrades: [],
         monthlyHistory: { portfolio: '', history: [] },
         cumulativePnLData: [],
+        tradingStats: null,
+        monthlyPerformance: null,
+        totalInvested: null,
       },
       calculations: {
         positionTracking: [],
@@ -185,6 +191,27 @@ class DataLogger {
   logCumulativePnL(data: CumulativePnLPoint[]) {
     this.logData.processedData.cumulativePnLData = data;
     console.log(`📈 Cumulative P&L Data:`, data.length, 'points');
+  }
+
+  logTradingStats(stats: TradeStats) {
+    this.logData.processedData.tradingStats = stats;
+    console.log(`📊 Trading Statistics:`, {
+      totalTrades: stats.totalTrades,
+      winRate: `${stats.winRate.toFixed(1)}%`,
+      totalPnL: `$${stats.totalPnL.toFixed(2)}`,
+      winningTrades: stats.winningTrades,
+      losingTrades: stats.losingTrades,
+    });
+  }
+
+  logMonthlyPerformance(performance: MonthlyPerformance[]) {
+    this.logData.processedData.monthlyPerformance = performance;
+    console.log(`📈 Monthly Performance:`, performance.length, 'months');
+  }
+
+  logTotalInvested(totalInvested: number) {
+    this.logData.processedData.totalInvested = totalInvested;
+    console.log(`💰 Total Invested:`, `$${totalInvested.toFixed(2)}`);
   }
 
   logPositionTracking(
@@ -446,14 +473,83 @@ class DataLogger {
     lines.push('CUMULATIVE P&L CHART DATA');
     lines.push('-'.repeat(40));
     lines.push(`Total Data Points: ${this.logData.processedData.cumulativePnLData.length}`);
+    lines.push('');
+
+    // Show ALL data points without omission
     this.logData.processedData.cumulativePnLData.forEach((point, i) => {
-      if (i < 10 || i >= this.logData.processedData.cumulativePnLData.length - 5) {
-        lines.push(`${point.date}: $${point.value.toFixed(2)}`);
-      } else if (i === 10) {
-        lines.push('... (middle data points omitted) ...');
-      }
+      const prevPoint = i > 0 ? this.logData.processedData.cumulativePnLData[i - 1] : null;
+      const change = prevPoint ? point.value - prevPoint.value : 0;
+      const changeStr = prevPoint ? ` (${change >= 0 ? '+' : ''}$${change.toFixed(2)})` : '';
+      lines.push(`${(i + 1).toString().padStart(3, ' ')}. ${point.date}: $${point.value.toFixed(2)}${changeStr}`);
     });
     lines.push('');
+
+    // P&L Analysis - Identify largest changes
+    lines.push('P&L CHANGE ANALYSIS');
+    lines.push('-'.repeat(40));
+    const changes: Array<{ date: string; change: number; value: number }> = [];
+    for (let i = 1; i < this.logData.processedData.cumulativePnLData.length; i++) {
+      const current = this.logData.processedData.cumulativePnLData[i];
+      const previous = this.logData.processedData.cumulativePnLData[i - 1];
+      changes.push({
+        date: current.date,
+        change: current.value - previous.value,
+        value: current.value,
+      });
+    }
+
+    // Sort by largest absolute changes
+    const significantChanges = changes
+      .filter(c => Math.abs(c.change) > 500) // Changes greater than $500
+      .sort((a, b) => Math.abs(b.change) - Math.abs(a.change));
+
+    lines.push(`Significant Changes (>$500): ${significantChanges.length}`);
+    significantChanges.slice(0, 20).forEach((change, i) => {
+      const sign = change.change >= 0 ? '+' : '';
+      lines.push(
+        `${(i + 1).toString().padStart(3, ' ')}. ${change.date}: ${sign}$${change.change.toFixed(
+          2,
+        )} (Total: $${change.value.toFixed(2)})`,
+      );
+    });
+    lines.push('');
+
+    // Trading Statistics
+    if (this.logData.processedData.tradingStats) {
+      lines.push('TRADING STATISTICS (CLOSED POSITIONS)');
+      lines.push('-'.repeat(40));
+      const stats = this.logData.processedData.tradingStats;
+      lines.push(`Total Closed Positions: ${stats.totalTrades}`);
+      lines.push(`Winning Positions: ${stats.winningTrades} (${stats.winRate.toFixed(1)}%)`);
+      lines.push(`Losing Positions: ${stats.losingTrades} (${(100 - stats.winRate).toFixed(1)}%)`);
+      lines.push(`Total P&L (Closed): $${stats.totalPnL.toFixed(2)}`);
+      lines.push(`Average Trade P&L: $${stats.averageTradePnL.toFixed(2)}`);
+      lines.push(`Average Winning Trade: $${stats.averageWin.toFixed(2)}`);
+      lines.push(`Average Losing Trade: $${stats.averageLoss.toFixed(2)}`);
+      lines.push(`Largest Gain: $${stats.largestWin.toFixed(2)}`);
+      lines.push(`Largest Loss: $${stats.largestLoss.toFixed(2)}`);
+      lines.push('');
+    }
+
+    // Total Invested
+    if (this.logData.processedData.totalInvested !== null) {
+      lines.push('INVESTMENT SUMMARY');
+      lines.push('-'.repeat(40));
+      lines.push(`Total Amount Invested: $${this.logData.processedData.totalInvested.toFixed(2)}`);
+      lines.push('');
+    }
+
+    // Monthly Performance
+    if (this.logData.processedData.monthlyPerformance) {
+      lines.push('MONTHLY PERFORMANCE SUMMARY');
+      lines.push('-'.repeat(40));
+      this.logData.processedData.monthlyPerformance.forEach(month => {
+        lines.push(`${month.month}:`);
+        lines.push(`  Trades: ${month.trades}`);
+        lines.push(`  P&L: $${month.pnl.toFixed(2)}`);
+        lines.push('');
+      });
+    }
 
     // Errors
     if (this.logData.errors.length > 0) {
