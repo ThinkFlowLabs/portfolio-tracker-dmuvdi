@@ -32,22 +32,22 @@ export function CumulativePnLChart({ data, currentPnL, totalInvested }: Cumulati
     return date.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
   };
 
-  const currentPnLPercentage = totalInvested > 0 ? (currentPnL / totalInvested) * 100 : 0;
+  const currentPnLPercentage = (currentPnL / STARTING_EQUITY) * 100;
   // Add starting point and convert data based on view mode
   const chartData =
     viewMode === 'absolute'
       ? [
-          { date: 'Start', value: 0 },
+          { date: 'Start', value: STARTING_EQUITY },
           ...data.map(point => ({
             date: point.date,
-            value: point.value, // Show actual cumulative P&L, not equity
+            value: STARTING_EQUITY + point.value, // Show equity: starting capital + cumulative P&L
           })),
         ]
       : [
           { date: 'Start', value: 0 },
           ...data.map(point => ({
             date: point.date,
-            value: totalInvested > 0 ? (point.value / totalInvested) * 100 : 0,
+            value: (point.value / STARTING_EQUITY) * 100, // % return based on starting equity
           })),
         ];
 

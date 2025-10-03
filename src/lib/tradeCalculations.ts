@@ -110,32 +110,48 @@ export async function calculateMarkToMarketCumulativePnL(
   closedTransactionsJson: FirebaseTransaction[],
   onProgress?: (current: number, total: number, currentMonth: string) => void
 ): Promise<CumulativePnLPoint[]> {
+  const STARTING_EQUITY = 10000;
+
   try {
     // Get monthly portfolio history with mark-to-market values
     const portfolioHistory = await calculateMonthlyPortfolioHistory(transactionPortfolioJson, closedTransactionsJson, onProgress);
 
     const points: CumulativePnLPoint[] = [];
 
-    // Convert monthly history to cumulative P&L points
+    // Calculate realized P&L from closed positions
+    const trades = parseFirebaseJson(transactionPortfolioJson, closedTransactionsJson);
+    const tradesWithPnL = calculatePnL(trades);
+
+    // Convert monthly history to equity curve points
     for (const monthData of portfolioHistory.history) {
       // Use last day of month for the date
       const [year, month] = monthData.month.split('-').map(Number);
       const lastDay = new Date(year, month, 0).getDate();
       const dateStr = `${month.toString().padStart(2, '0')}/${lastDay.toString().padStart(2, '0')}/${year}`;
+      const monthEnd = new Date(year, month, 0, 23, 59, 59);
 
-      // Calculate the total value vs total invested for mark-to-market P&L
-      // portfolio_value is the current market value
-      // We need to calculate what was actually invested vs current value
-      const totalInvestedThisMonth = monthData.assets.reduce((sum, asset) => {
-        return sum + asset.avg_price * asset.shares;
-      }, 0);
+      // Calculate cumulative realized P&L up to this month (from closed trades)
+      const realizedPnL = tradesWithPnL
+        .filter(t => {
+          const tradeDate = new Date(t.date);
+          return tradeDate <= monthEnd && t.pnl !== undefined && t.pnl !== 0;
+        })
+        .reduce((sum, t) => sum + (t.pnl || 0), 0);
 
-      const markToMarketPL = monthData.portfolio_value - totalInvestedThisMonth;
+      // portfolio_pl is ONLY unrealized P&L on open positions at month-end
+      // Total equity = Starting Capital + Cumulative Realized P&L + Unrealized P&L
+      const unrealizedPnL = monthData.portfolio_pl;
+      const totalEquity = STARTING_EQUITY + realizedPnL + unrealizedPnL;
+
+      // Store as P&L (equity - starting capital) for compatibility with chart
+      const cumulativePnL = totalEquity - STARTING_EQUITY;
 
       points.push({
         date: dateStr,
-        value: markToMarketPL, // Corrected mark-to-market P&L
+        value: cumulativePnL,
       });
+
+      console.log(`${dateStr}: Equity=$${totalEquity.toFixed(2)}, Realized=$${realizedPnL.toFixed(2)}, Unrealized=$${unrealizedPnL.toFixed(2)}, Total P&L=$${cumulativePnL.toFixed(2)}`);
     }
 
     console.log(`Generated ${points.length} mark-to-market data points`);
@@ -629,13 +645,19 @@ export async function calculateMonthlyPortfolioHistory(
         if (position.shares < 0) {
           // Closing short position
           const sharesToClose = Math.min(Math.abs(position.shares), transaction.amount);
+          const avgCost = Math.abs(position.shares) > 0 ? position.totalCost / Math.abs(position.shares) : 0;
           position.shares += sharesToClose;
+          position.totalCost -= sharesToClose * avgCost; // Reduce cost basis when closing
 
           if (transaction.amount > sharesToClose) {
             // Opening long with remaining
             const remainingShares = transaction.amount - sharesToClose;
             position.shares += remainingShares;
             position.totalCost += remainingShares * transaction.price;
+            position.isShort = false;
+          } else if (Math.abs(position.shares) < 0.001) {
+            // Position fully closed
+            position.totalCost = 0;
             position.isShort = false;
           }
         } else {
@@ -648,7 +670,9 @@ export async function calculateMonthlyPortfolioHistory(
         if (position.shares > 0) {
           // Closing long position
           const sharesToClose = Math.min(position.shares, transaction.amount);
+          const avgCost = position.shares > 0 ? position.totalCost / position.shares : 0;
           position.shares -= sharesToClose;
+          position.totalCost -= sharesToClose * avgCost; // Reduce cost basis when closing
 
           if (transaction.amount > sharesToClose) {
             // Opening short with remaining
@@ -656,6 +680,10 @@ export async function calculateMonthlyPortfolioHistory(
             position.shares -= remainingShares;
             position.totalCost += remainingShares * transaction.price;
             position.isShort = true;
+          } else if (Math.abs(position.shares) < 0.001) {
+            // Position fully closed
+            position.totalCost = 0;
+            position.isShort = false;
           }
         } else {
           // Opening or adding to short
