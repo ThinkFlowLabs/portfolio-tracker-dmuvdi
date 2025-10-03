@@ -65,7 +65,7 @@ const Index = () => {
             closedTransactionsData,
             (current, total, currentMonth) => {
               setProgressData({ current, total, currentMonth });
-            }
+            },
           );
           setCumulativePnLData(markToMarketData);
           console.log('Mark-to-market data loaded:', markToMarketData.length, 'points');
@@ -110,13 +110,14 @@ const Index = () => {
               <div className="space-y-2 w-64 mx-auto">
                 <div className="flex justify-between text-sm text-muted-foreground">
                   <span>{progressData.currentMonth}</span>
-                  <span>{progressData.current}/{progressData.total}</span>
+                  <span>
+                    {progressData.current}/{progressData.total}
+                  </span>
                 </div>
                 <div className="w-full bg-muted rounded-full h-2">
-                  <div 
-                    className="bg-success h-2 rounded-full transition-all duration-300" 
-                    style={{ width: `${(progressData.current / progressData.total) * 100}%` }}
-                  ></div>
+                  <div
+                    className="bg-success h-2 rounded-full transition-all duration-300"
+                    style={{ width: `${(progressData.current / progressData.total) * 100}%` }}></div>
                 </div>
                 <div className="text-xs text-center text-muted-foreground">
                   {Math.round((progressData.current / progressData.total) * 100)}% completado
