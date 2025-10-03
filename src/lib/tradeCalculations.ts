@@ -12,15 +12,38 @@ export function calculatePnL(trades: Trade[]): Trade[] {
         positions[symbol] = { quantity: 0, avgPrice: 0 };
       }
 
-      const totalCost = positions[symbol].quantity * positions[symbol].avgPrice + trade.quantity * trade.price;
-      positions[symbol].quantity += trade.quantity;
-      positions[symbol].avgPrice = totalCost / positions[symbol].quantity;
+      // If we have a short position, Compra closes it (generates P&L)
+      if (positions[symbol].quantity < 0) {
+        const pnl = (positions[symbol].avgPrice - trade.price) * Math.abs(trade.quantity) - trade.commission;
+        positions[symbol].quantity += trade.quantity;
 
-      tradesWithPnL.push({ ...trade, pnl: -trade.commission });
+        if (Math.abs(positions[symbol].quantity) < 0.0001) {
+          delete positions[symbol];
+        }
+
+        tradesWithPnL.push({ ...trade, pnl });
+      } else {
+        // Opening or adding to long position
+        const totalCost = positions[symbol].quantity * positions[symbol].avgPrice + trade.quantity * trade.price;
+        positions[symbol].quantity += trade.quantity;
+        positions[symbol].avgPrice = totalCost / positions[symbol].quantity;
+
+        tradesWithPnL.push({ ...trade, pnl: -trade.commission });
+      }
     } else if (trade.side === 'Cierre') {
       if (positions[symbol]) {
-        const pnl = (trade.price - positions[symbol].avgPrice) * Math.abs(trade.quantity) - trade.commission;
-        positions[symbol].quantity += trade.quantity;
+        const quantityToClose = Math.abs(trade.quantity);
+        let pnl = 0;
+
+        if (positions[symbol].quantity > 0) {
+          // Closing LONG position: P&L = (sell_price - avg_buy_price) * quantity
+          pnl = (trade.price - positions[symbol].avgPrice) * quantityToClose - trade.commission;
+          positions[symbol].quantity -= quantityToClose;
+        } else {
+          // Closing SHORT position: P&L = (avg_sell_price - buy_price) * quantity
+          pnl = (positions[symbol].avgPrice - trade.price) * quantityToClose - trade.commission;
+          positions[symbol].quantity += quantityToClose;
+        }
 
         if (Math.abs(positions[symbol].quantity) < 0.0001) {
           delete positions[symbol];
@@ -47,10 +70,13 @@ export function calculatePnL(trades: Trade[]): Trade[] {
 
         tradesWithPnL.push({ ...trade, pnl });
       } else {
-        // Opening a short position - no realized P&L yet
-        const totalCost = positions[symbol].quantity * positions[symbol].avgPrice - trade.quantity * trade.price;
+        // Opening or adding to short position
+        const currentValue = Math.abs(positions[symbol].quantity) * positions[symbol].avgPrice;
+        const newValue = Math.abs(trade.quantity) * trade.price;
+        const totalQuantity = Math.abs(positions[symbol].quantity) + Math.abs(trade.quantity);
+
         positions[symbol].quantity -= Math.abs(trade.quantity);
-        positions[symbol].avgPrice = positions[symbol].quantity !== 0 ? totalCost / positions[symbol].quantity : 0;
+        positions[symbol].avgPrice = (currentValue + newValue) / totalQuantity;
 
         tradesWithPnL.push({ ...trade, pnl: -trade.commission });
       }
@@ -80,13 +106,15 @@ export function calculateCumulativePnL(trades: Trade[]): CumulativePnLPoint[] {
 
 export function calculateTotalInvested(trades: Trade[]): number {
   const buyTrades = trades.filter(t => t.side === 'Compra');
-  const totalInvested = buyTrades.reduce((sum, t) => sum + (t.quantity * t.price), 0);
+  const totalInvested = buyTrades.reduce((sum, t) => sum + t.quantity * t.price, 0);
   return totalInvested;
 }
 
 export function calculateStats(trades: Trade[]): TradeStats {
   const tradesWithPnL = calculatePnL(trades);
-  const closingTrades = tradesWithPnL.filter(t => (t.side === 'Cierre' || t.side === 'Venta') && t.pnl !== undefined && t.pnl !== 0);
+  const closingTrades = tradesWithPnL.filter(
+    t => (t.side === 'Cierre' || t.side === 'Venta') && t.pnl !== undefined && t.pnl !== 0,
+  );
 
   const totalPnL = closingTrades.reduce((sum, t) => sum + (t.pnl || 0), 0);
   const winningTrades = closingTrades.filter(t => (t.pnl || 0) > 0);
@@ -95,21 +123,15 @@ export function calculateStats(trades: Trade[]): TradeStats {
   const totalTrades = closingTrades.length;
   const winRate = totalTrades > 0 ? (winningTrades.length / totalTrades) * 100 : 0;
 
-  const averageWin = winningTrades.length > 0
-    ? winningTrades.reduce((sum, t) => sum + (t.pnl || 0), 0) / winningTrades.length
-    : 0;
+  const averageWin =
+    winningTrades.length > 0 ? winningTrades.reduce((sum, t) => sum + (t.pnl || 0), 0) / winningTrades.length : 0;
 
-  const averageLoss = losingTrades.length > 0
-    ? losingTrades.reduce((sum, t) => sum + (t.pnl || 0), 0) / losingTrades.length
-    : 0;
+  const averageLoss =
+    losingTrades.length > 0 ? losingTrades.reduce((sum, t) => sum + (t.pnl || 0), 0) / losingTrades.length : 0;
 
-  const largestWin = winningTrades.length > 0
-    ? Math.max(...winningTrades.map(t => t.pnl || 0))
-    : 0;
+  const largestWin = winningTrades.length > 0 ? Math.max(...winningTrades.map(t => t.pnl || 0)) : 0;
 
-  const largestLoss = losingTrades.length > 0
-    ? Math.min(...losingTrades.map(t => t.pnl || 0))
-    : 0;
+  const largestLoss = losingTrades.length > 0 ? Math.min(...losingTrades.map(t => t.pnl || 0)) : 0;
 
   const averageTradePnL = totalTrades > 0 ? totalPnL / totalTrades : 0;
 
@@ -129,20 +151,39 @@ export function calculateStats(trades: Trade[]): TradeStats {
 
 export function calculateMonthlyPerformance(trades: Trade[]): MonthlyPerformance[] {
   const tradesWithPnL = calculatePnL(trades);
-  const closingTrades = tradesWithPnL.filter(t => (t.side === 'Cierre' || t.side === 'Venta') && t.pnl !== undefined && t.pnl !== 0);
-  
+
+  // Filter trades that generate realized P&L (both closing longs and shorts)
+  const realizingTrades = tradesWithPnL.filter(t => {
+    // Include any trade that has actual P&L (positive or negative)
+    // This captures:
+    // - Cierre: Always closes a position
+    // - Venta: When closing a long position (generates P&L)
+    // - Compra: When closing a short position (generates P&L)
+    return t.pnl !== undefined && t.pnl !== 0 && Math.abs(t.pnl) > 0.01; // Ignore tiny commission-only P&L
+  });
+
   const monthlyData: { [month: string]: { trades: number; pnl: number } } = {};
 
-  for (const trade of closingTrades) {
+  // Count ALL trades (Compra, Venta, Cierre) for trade count
+  for (const trade of tradesWithPnL) {
     const date = new Date(trade.date);
     const monthKey = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}`;
-    
+
     if (!monthlyData[monthKey]) {
       monthlyData[monthKey] = { trades: 0, pnl: 0 };
     }
-    
+
     monthlyData[monthKey].trades += 1;
-    monthlyData[monthKey].pnl += trade.pnl || 0;
+  }
+
+  // Add P&L only from trades that realize gains/losses
+  for (const trade of realizingTrades) {
+    const date = new Date(trade.date);
+    const monthKey = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}`;
+
+    if (monthlyData[monthKey]) {
+      monthlyData[monthKey].pnl += trade.pnl || 0;
+    }
   }
 
   return Object.entries(monthlyData)
@@ -199,9 +240,9 @@ function getPortfolioId(portfolioRef: FirestoreReference): string {
 
 export function parseFirebaseJson(
   transactionPortfolioJson: FirebaseTransaction[],
-  closedTransactionsJson: FirebaseTransaction[]
+  closedTransactionsJson: FirebaseTransaction[],
 ): Trade[] {
-  const TARGET_PORTFOLIO_ID = "Kq0kpiyAuukdS2l4uvDb";
+  const TARGET_PORTFOLIO_ID = 'Kq0kpiyAuukdS2l4uvDb';
   const trades: Trade[] = [];
 
   // Combine both arrays

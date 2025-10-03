@@ -27,7 +27,7 @@ export function MonthlyCharts({ data }: MonthlyChartsProps) {
       <Card className="border-border bg-card premium-card shadow-premium overflow-hidden">
         <CardHeader>
           <CardTitle className="text-sm uppercase tracking-wider font-semibold text-muted-foreground">
-            Trade Distribution by Month
+            Trade Distribution by Month Open
           </CardTitle>
         </CardHeader>
         <CardContent>
@@ -35,8 +35,8 @@ export function MonthlyCharts({ data }: MonthlyChartsProps) {
             <BarChart data={data} layout="vertical">
               <defs>
                 <linearGradient id="tradeGradient" x1="0" y1="0" x2="1" y2="0">
-                  <stop offset="0%" stopColor="hsl(var(--success))" stopOpacity={0.8}/>
-                  <stop offset="100%" stopColor="hsl(var(--success))" stopOpacity={1}/>
+                  <stop offset="0%" stopColor="hsl(var(--success))" stopOpacity={0.8} />
+                  <stop offset="100%" stopColor="hsl(var(--success))" stopOpacity={1} />
                 </linearGradient>
               </defs>
               <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" opacity={0.3} />
@@ -62,18 +62,13 @@ export function MonthlyCharts({ data }: MonthlyChartsProps) {
                   borderRadius: '12px',
                   backdropFilter: 'blur(16px)',
                   boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3)',
-                  padding: '12px 16px'
+                  padding: '12px 16px',
                 }}
                 formatter={(value: number) => [value, 'Trades']}
                 labelFormatter={formatMonth}
                 cursor={{ fill: 'rgba(16, 185, 129, 0.1)' }}
               />
-              <Bar
-                dataKey="trades"
-                fill="url(#tradeGradient)"
-                radius={[0, 8, 8, 0]}
-                animationDuration={1200}
-              />
+              <Bar dataKey="trades" fill="url(#tradeGradient)" radius={[0, 8, 8, 0]} animationDuration={1200} />
             </BarChart>
           </ResponsiveContainer>
         </CardContent>
@@ -82,7 +77,7 @@ export function MonthlyCharts({ data }: MonthlyChartsProps) {
       <Card className="border-border bg-card premium-card shadow-premium overflow-hidden">
         <CardHeader>
           <CardTitle className="text-sm uppercase tracking-wider font-semibold text-muted-foreground">
-            Performance by Month
+            Performance by Month Close
           </CardTitle>
         </CardHeader>
         <CardContent>
@@ -90,12 +85,12 @@ export function MonthlyCharts({ data }: MonthlyChartsProps) {
             <BarChart data={data} layout="vertical">
               <defs>
                 <linearGradient id="profitGradient" x1="0" y1="0" x2="1" y2="0">
-                  <stop offset="0%" stopColor="hsl(var(--success))" stopOpacity={0.8}/>
-                  <stop offset="100%" stopColor="hsl(var(--success))" stopOpacity={1}/>
+                  <stop offset="0%" stopColor="hsl(var(--success))" stopOpacity={0.8} />
+                  <stop offset="100%" stopColor="hsl(var(--success))" stopOpacity={1} />
                 </linearGradient>
                 <linearGradient id="lossGradient" x1="0" y1="0" x2="1" y2="0">
-                  <stop offset="0%" stopColor="hsl(var(--destructive))" stopOpacity={1}/>
-                  <stop offset="100%" stopColor="hsl(var(--destructive))" stopOpacity={0.8}/>
+                  <stop offset="0%" stopColor="hsl(var(--destructive))" stopOpacity={1} />
+                  <stop offset="100%" stopColor="hsl(var(--destructive))" stopOpacity={0.8} />
                 </linearGradient>
               </defs>
               <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" opacity={0.3} />
@@ -122,7 +117,7 @@ export function MonthlyCharts({ data }: MonthlyChartsProps) {
                   borderRadius: '12px',
                   backdropFilter: 'blur(16px)',
                   boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3)',
-                  padding: '12px 16px'
+                  padding: '12px 16px',
                 }}
                 formatter={(value: number) => [formatCurrency(value), 'P&L']}
                 labelFormatter={formatMonth}
@@ -130,10 +125,7 @@ export function MonthlyCharts({ data }: MonthlyChartsProps) {
               />
               <Bar dataKey="pnl" radius={[0, 8, 8, 0]} animationDuration={1200}>
                 {data.map((entry, index) => (
-                  <Cell
-                    key={`cell-${index}`}
-                    fill={entry.pnl >= 0 ? 'url(#profitGradient)' : 'url(#lossGradient)'}
-                  />
+                  <Cell key={`cell-${index}`} fill={entry.pnl >= 0 ? 'url(#profitGradient)' : 'url(#lossGradient)'} />
                 ))}
               </Bar>
             </BarChart>

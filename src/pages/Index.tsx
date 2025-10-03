@@ -5,7 +5,7 @@ import {
   calculateStats,
   calculateMonthlyPerformance,
   calculateTotalInvested,
-  parseFirebaseJson
+  parseFirebaseJson,
 } from '@/lib/tradeCalculations';
 import { CumulativePnLChart } from '@/components/portfolio/CumulativePnLChart';
 import { StatsGrid } from '@/components/portfolio/StatsGrid';
@@ -28,7 +28,7 @@ const Index = () => {
 
         const [transactionPortfolioResponse, closedTransactionsResponse] = await Promise.all([
           fetch('/transaction_portfolio.json'),
-          fetch('/closed_transactions.json')
+          fetch('/closed_transactions.json'),
         ]);
 
         console.log('Fetch responses:', transactionPortfolioResponse.status, closedTransactionsResponse.status);
@@ -105,9 +105,7 @@ const Index = () => {
                 <TrendingUp className="h-7 w-7 text-success drop-shadow-lg" />
               </div>
               <div>
-                <h1 className="text-3xl font-bold text-foreground tracking-tight">
-                  Portafolio Privado Daniel Muvdi
-                </h1>
+                <h1 className="text-3xl font-bold text-foreground tracking-tight">Portafolio Privado Daniel Muvdi</h1>
                 <p className="text-muted-foreground text-sm font-medium mt-0.5">
                   Panel de rendimiento de trading en tiempo real
                 </p>
