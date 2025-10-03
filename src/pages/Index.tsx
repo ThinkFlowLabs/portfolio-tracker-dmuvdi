@@ -14,6 +14,7 @@ import { MonthlyCharts } from '@/components/portfolio/MonthlyCharts';
 import { TradesTable } from '@/components/portfolio/TradesTable';
 import { AddTradeDialog } from '@/components/portfolio/AddTradeDialog';
 import { TrendingUp } from 'lucide-react';
+import { dataLogger } from '@/lib/dataLogger';
 
 const Index = () => {
   const [trades, setTrades] = useState<Trade[]>([]);
@@ -24,6 +25,9 @@ const Index = () => {
 
   useEffect(() => {
     const loadTrades = async () => {
+      // Start logging session
+      dataLogger.startSession();
+
       try {
         // Clear localStorage to force fresh load
         localStorage.removeItem('portfolio-trades');
@@ -47,7 +51,13 @@ const Index = () => {
         console.log('Transaction portfolio count:', transactionPortfolioData.length);
         console.log('Closed transactions count:', closedTransactionsData.length);
 
+        // Log raw data
+        dataLogger.logRawData(transactionPortfolioData, closedTransactionsData);
+
         const parsedTrades = parseFirebaseJson(transactionPortfolioData, closedTransactionsData);
+
+        // Log parsed trades
+        dataLogger.logParsedTrades(parsedTrades);
 
         console.log('Parsed trades count:', parsedTrades.length);
         console.log('First 3 trades:', parsedTrades.slice(0, 3));
@@ -68,20 +78,30 @@ const Index = () => {
             },
           );
           setCumulativePnLData(markToMarketData);
+
+          // Log cumulative P&L data
+          dataLogger.logCumulativePnL(markToMarketData);
           console.log('Mark-to-market data loaded:', markToMarketData.length, 'points');
         } catch (error) {
           console.error('Error calculating mark-to-market data:', error);
+          dataLogger.logError(String(error), 'calculateMarkToMarketCumulativePnL');
           // Fallback to traditional calculation
           const fallbackData = calculateCumulativePnL(parsedTrades);
           setCumulativePnLData(fallbackData);
+          dataLogger.logCumulativePnL(fallbackData);
         } finally {
           setLoadingMarkToMarket(false);
           setProgressData({ current: 0, total: 0, currentMonth: '' });
         }
       } catch (error) {
         console.error('Error loading trades:', error);
+        dataLogger.logError(String(error), 'loadTrades');
       } finally {
         setLoading(false);
+
+        // Finalize logging (sin generar archivo automáticamente)
+        dataLogger.finalizeSummary();
+        // await dataLogger.generateLogFile(); // PAUSADO: Descarga automática deshabilitada
       }
     };
 
@@ -157,7 +177,15 @@ const Index = () => {
                 </p>
               </div>
             </div>
-            <AddTradeDialog onAddTrade={handleAddTrade} />
+            <div className="flex items-center gap-3">
+              <button
+                onClick={() => dataLogger.generateLogFile()}
+                className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors duration-200 text-sm font-medium shadow-lg"
+                title="Descargar log de cálculos (solo manual)">
+                📊 Descargar Log
+              </button>
+              <AddTradeDialog onAddTrade={handleAddTrade} />
+            </div>
           </div>
         </div>
       </header>

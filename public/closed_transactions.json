@@ -481,7 +481,7 @@
       "_nanoseconds": 0
     },
     "ticker": "BOIL",
-    "amount": 84.94,
+    "amount": 0.8494,
     "allocation": 16.009800000000002,
     "id_portfolio": {
       "_firestore": {
@@ -492,7 +492,7 @@
       },
       "_converter": {}
     },
-    "price": 18.25,
+    "price": 18825.0,
     "name": "ProShares Ultra Bloomberg Natural Gas",
     "amount_usd": 77.5625,
     "allocationCalc": 0.775625,
@@ -2096,8 +2096,8 @@
     "ticker": "CHPT",
     "type": "Stock",
     "operation": "Cierre",
-    "price": 0.7,
-    "amount": 159.58,
+    "price": 14.0,
+    "amount": 7.979,
     "allocation": 3.000104,
     "amount_usd": 111.706,
     "created_time": {

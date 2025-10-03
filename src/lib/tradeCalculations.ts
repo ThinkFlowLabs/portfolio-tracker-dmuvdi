@@ -1,4 +1,5 @@
 import { Trade, TradeStats, CumulativePnLPoint, MonthlyPerformance } from '@/types/trade';
+import { dataLogger } from './dataLogger';
 
 export function calculatePnL(trades: Trade[]): Trade[] {
   const positions: { [symbol: string]: { quantity: number; avgPrice: number } } = {};
@@ -120,6 +121,9 @@ export async function calculateMarkToMarketCumulativePnL(
       onProgress,
     );
 
+    // Log monthly history
+    dataLogger.logMonthlyHistory(portfolioHistory);
+
     const points: CumulativePnLPoint[] = [];
 
     // Calculate realized P&L from closed positions
@@ -155,7 +159,11 @@ export async function calculateMarkToMarketCumulativePnL(
         value: cumulativePnL,
       });
 
-      console.log(`${dateStr}: Equity=$${totalEquity.toFixed(2)}, Realized=$${realizedPnL.toFixed(2)}, Unrealized=$${unrealizedPnL.toFixed(2)}, Total P&L=$${cumulativePnL.toFixed(2)}`);
+      console.log(
+        `${dateStr}: Equity=$${totalEquity.toFixed(2)}, Realized=$${realizedPnL.toFixed(
+          2,
+        )}, Unrealized=$${unrealizedPnL.toFixed(2)}, Total P&L=$${cumulativePnL.toFixed(2)}`,
+      );
     }
 
     console.log(`Generated ${points.length} mark-to-market data points`);
@@ -285,6 +293,7 @@ interface FirebaseTransaction {
   id_asset?: FirestoreReference;
   name?: string;
   amount_usd?: number;
+  type?: string; // Campo tipo del activo (ej: "Cripto", "Accion")
 }
 
 function convertTimestampToDate(timestamp: FirestoreTimestamp): string {
@@ -498,7 +507,7 @@ export function calculateAssetPositions(
 
 // Helper function to get historical prices for multiple tickers using batch API
 async function getBatchHistoricalPrices(
-  tickers: string[],
+  tickerInfo: Array<{ ticker: string; assetType: string }>,
   year: number,
   month: number,
 ): Promise<{ [ticker: string]: number }> {
@@ -507,19 +516,40 @@ async function getBatchHistoricalPrices(
     const lastDay = new Date(year, month, 0).getDate();
     const dateStr = `${year}-${month.toString().padStart(2, '0')}-${lastDay.toString().padStart(2, '0')}`;
 
-    // Prepare symbols array - assuming all are stocks for now
-    const symbols = tickers.map(ticker => ({
-      symbol: ticker,
-      type: 'stock', // Default to stock, could be enhanced to detect crypto/forex
-    }));
+    // Function to convert Firebase asset types to API format
+    const convertAssetType = (firebaseType: string): string => {
+      switch (firebaseType) {
+        case 'Cripto':
+          return 'crypto';
+        case 'Accion':
+          return 'stock';
+        case 'Forex':
+          return 'forex';
+        default:
+          console.warn(`Unknown asset type: ${firebaseType}, defaulting to stock`);
+          return 'stock';
+      }
+    };
+
+    // Prepare symbols array using real asset type information
+    const symbols = tickerInfo.map(info => {
+      const apiType = convertAssetType(info.assetType);
+      console.log(`${info.ticker} from Firebase type "${info.assetType}" -> API type "${apiType}"`);
+      return {
+        symbol: info.ticker,
+        type: apiType,
+      };
+    });
 
     const requestBody = {
       symbols: symbols,
       date: dateStr,
     };
 
-    console.log(`Fetching batch prices for ${tickers.length} symbols on ${dateStr}`);
+    console.log(`Fetching batch prices for ${tickerInfo.length} symbols on ${dateStr}`);
+    console.log('Symbol types:', symbols.map(s => `${s.symbol}:${s.type}`).join(', '));
 
+    const startTime = Date.now();
     const response = await fetch('https://bitfinserver-production.up.railway.app/api/tickers/historical-prices/date', {
       method: 'POST',
       headers: {
@@ -530,20 +560,38 @@ async function getBatchHistoricalPrices(
 
     if (!response.ok) {
       console.warn(`Failed to get batch prices on ${dateStr}, status: ${response.status}`);
+      dataLogger.logError(
+        `API request failed with status ${response.status}`,
+        `getBatchHistoricalPrices for ${dateStr}`,
+      );
       return {};
     }
 
     const data = await response.json();
+    const duration = Date.now() - startTime;
+
+    // Log API call
+    dataLogger.logApiCall(
+      'https://bitfinserver-production.up.railway.app/api/tickers/historical-prices/date',
+      requestBody,
+      data,
+      duration,
+    );
 
     if (data.success && data.data) {
       const priceMap: { [ticker: string]: number } = {};
 
       for (const priceData of data.data) {
         if (priceData.priceFound && priceData.price > 0) {
+          const symbolInfo = symbols.find(s => s.symbol === priceData.symbol);
+
           priceMap[priceData.symbol] = priceData.price;
-          console.log(`Got price for ${priceData.symbol} on ${dateStr}: $${priceData.price}`);
+          dataLogger.logPriceData(priceData.symbol, dateStr, priceData.price);
+
+          console.log(`✅ Got price for ${priceData.symbol} (${symbolInfo?.type}) on ${dateStr}: $${priceData.price}`);
         } else {
           console.warn(`No price data for ${priceData.symbol} on ${dateStr}`);
+          dataLogger.logError(`No price data found`, `${priceData.symbol} on ${dateStr}`);
           priceMap[priceData.symbol] = 0;
         }
       }
@@ -606,6 +654,7 @@ export async function calculateMonthlyPortfolioHistory(
       totalCost: number;
       isShort: boolean;
       transactions: FirebaseTransaction[];
+      assetType: string;
     };
   } = {};
 
@@ -639,6 +688,7 @@ export async function calculateMonthlyPortfolioHistory(
           totalCost: 0,
           isShort: false,
           transactions: [],
+          assetType: transaction.type || 'Accion', // Usar el tipo del JSON original
         };
       }
 
@@ -711,15 +761,25 @@ export async function calculateMonthlyPortfolioHistory(
     // Get unique tickers for batch processing
     const openPositions = Object.entries(currentPositions).filter(([_, position]) => Math.abs(position.shares) > 0.001);
 
+    // Log position tracking for this month
+    dataLogger.logPositionTracking(monthKey, currentPositions);
+
     if (openPositions.length > 0) {
       console.log(`Processing ${openPositions.length} open positions for ${monthKey}`);
 
-      // Get all unique tickers for this month
-      const tickers = openPositions.map(([_, position]) => position.ticker);
-      const uniqueTickers = [...new Set(tickers)];
+      // Get ticker info with asset types for this month
+      const tickerInfoMap = new Map<string, string>();
+      openPositions.forEach(([_, position]) => {
+        tickerInfoMap.set(position.ticker, position.assetType);
+      });
+
+      const tickerInfo = Array.from(tickerInfoMap.entries()).map(([ticker, assetType]) => ({
+        ticker,
+        assetType,
+      }));
 
       // Fetch all prices in one batch call
-      const priceMap = await getBatchHistoricalPrices(uniqueTickers, year, month);
+      const priceMap = await getBatchHistoricalPrices(tickerInfo, year, month);
 
       for (const [id_asset, position] of openPositions) {
         const priceClose = priceMap[position.ticker] || 0;
@@ -765,6 +825,14 @@ export async function calculateMonthlyPortfolioHistory(
       console.log(
         `${monthKey}: Portfolio Value: $${portfolioValue.toFixed(2)}, Portfolio P&L: $${portfolioPL.toFixed(2)}`,
       );
+
+      // Log monthly calculation details
+      dataLogger.logMonthlyCalculation(monthKey, {
+        openPositions: openPositions.length,
+        portfolioValue: portfolioValue,
+        portfolioPL: portfolioPL,
+        assetsProcessed: monthlyAssets.map(asset => asset.asset),
+      });
 
       history.push({
         month: monthKey,

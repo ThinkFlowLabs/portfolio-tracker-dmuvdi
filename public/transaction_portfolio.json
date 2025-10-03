@@ -953,8 +953,8 @@
       },
       "_converter": {}
     },
-    "amount": 11.0,
-    "price": 28.0
+    "amount": 0.11,
+    "price": 2800
   },
   {
     "id": "9wM4q9lU5Z1sHI9poEWh",
@@ -2768,8 +2768,8 @@
       },
       "_converter": {}
     },
-    "amount": 38.94,
-    "price": 6.42
+    "amount": 0.3894,
+    "price": 642.0
   },
   {
     "id": "PMj12B8hP9lonF6xgSVX",
@@ -3824,8 +3824,8 @@
       },
       "_converter": {}
     },
-    "amount": 20.0,
-    "price": 15.12
+    "amount": 0.2,
+    "price": 1512.0
   },
   {
     "id": "XZ5lZPPBMzbVDT6377FT",
@@ -4319,8 +4319,8 @@
       "_converter": {}
     },
     "ticker": "BOIL",
-    "amount": 10.0,
-    "price": 53.42
+    "amount": 0.1,
+    "price": 534.2
   },
   {
     "id": "bt7d6mr1OXKvWwaLIm8Q",
@@ -5417,7 +5417,7 @@
       "_seconds": 1704987840,
       "_nanoseconds": 0
     },
-    "amount": 159.58,
+    "amount": 7.979,
     "allocation": 3,
     "ticker": "CHPT",
     "id_portfolio": {
@@ -5429,7 +5429,7 @@
       },
       "_converter": {}
     },
-    "price": 1.88,
+    "price": 37.6,
     "name": "ChargePoint Holdings, Inc",
     "amount_usd": 300.0104,
     "type": "Stock",
@@ -6035,8 +6035,8 @@
     "allocation": 2.06,
     "amount_usd": 206,
     "type": "Stock",
-    "amount": 5.0,
-    "price": 41.2
+    "amount": 0.05,
+    "price": 4120.0
   },
   {
     "id": "wnQ0H1EHymJhVx6Qz8fc",
