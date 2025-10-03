@@ -27,7 +27,7 @@ export function MonthlyCharts({ data }: MonthlyChartsProps) {
       <Card className="border-border bg-card premium-card shadow-premium overflow-hidden">
         <CardHeader>
           <CardTitle className="text-sm uppercase tracking-wider font-semibold text-muted-foreground">
-            Trade Distribution by Month Open
+            📊 Posiciones Cerradas por Mes
           </CardTitle>
         </CardHeader>
         <CardContent>
@@ -77,7 +77,7 @@ export function MonthlyCharts({ data }: MonthlyChartsProps) {
       <Card className="border-border bg-card premium-card shadow-premium overflow-hidden">
         <CardHeader>
           <CardTitle className="text-sm uppercase tracking-wider font-semibold text-muted-foreground">
-            Performance by Month Close
+            💰 P&L Realizado por Mes
           </CardTitle>
         </CardHeader>
         <CardContent>
